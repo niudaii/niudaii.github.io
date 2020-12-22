@@ -236,7 +236,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/18/DNS%E9%9A%A7%E9%81%93%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/18/Iodine%E6%90%AD%E5%BB%BADNS%E9%9A%A7%E9%81%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -250,7 +250,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/12/18/DNS%E9%9A%A7%E9%81%93%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">Iodine搭建DNS隧道</a>
+            <a href="/2020/12/18/Iodine%E6%90%AD%E5%BB%BADNS%E9%9A%A7%E9%81%93/" class="post-title-link" itemprop="url">Iodine搭建DNS隧道</a>
         </h2>
 
         <div class="post-meta-container">
@@ -260,10 +260,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2020-12-18 10:11:27 / 修改时间：21:13:02" itemprop="dateCreated datePublished" datetime="2020-12-18T10:11:27+08:00">2020-12-18</time>
+      <time title="创建时间：2020-12-18 10:11:27" itemprop="dateCreated datePublished" datetime="2020-12-18T10:11:27+08:00">2020-12-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-20 16:01:04" itemprop="dateModified" datetime="2020-12-20T16:01:04+08:00">2020-12-20</time>
+      </span>
 
   
 </div>
@@ -276,40 +282,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>之前研究了DNS Beacon免杀，但是上线之后速度实在太慢，还是需要搭建sock代理。比较常见的有dns2cat、dns2tcp、iodine。</p>
-<h4 id="Iodine"><a href="#Iodine" class="headerlink" title="Iodine"></a>Iodine</h4><h5 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h5><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb51s8i8j31l20bo76g.jpg" alt="image-20201218151202459"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># -f  在前台运行</span><br><span class="line"># -c  禁止检查所有传入请求的客户端 IP 地址</span><br><span class="line"># -P  客户端和服务器之间用于验证身份的密码</span><br><span class="line"># -D  指定调试级别。-DD指的是二级，D的数量随等级增加</span><br><span class="line"># 192.168.0.1  是自定义的局域网虚拟 IP 地址</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iodined -f -c -P zp857 10.1.1.1 dns1.knewpwp.cn -DD</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://code.kryo.se/iodine/check-it/">https://code.kryo.se/iodine/check-it/</a></p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5allnpj30ye0igadb.jpg" alt="image-20201218151233560"></p>
-<h5 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iodine.exe -f -P zp857 dns1.knewpwp.cn</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5ceeg5j31320jmjst.jpg" alt="image-20201218151443898"></p>
-<p>管理员权限执行，这时服务端和客户端都多出一张网卡</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5g52ocj311o0imgmr.jpg" alt="image-20201218171451317"></p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5iuq7xj30xm066tb5.jpg" alt="image-20201218171341392"></p>
-<blockquote>
-<p>测试发现WIN10虽然网卡增加了，但是ping不通，即通道并没有建立成功</p>
-<p>win7实测成功</p>
-</blockquote>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5kugvkj310k0d2gm9.jpg" alt="image-20201218170352780"></p>
-<h5 id="需要安装tap的情况"><a href="#需要安装tap的情况" class="headerlink" title="需要安装tap的情况"></a>需要安装tap的情况</h5><p>tap-windows-9.9.2_3.exe</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5n5hp1j30yu05o74i.jpg" alt="image-20201218153207869"></p>
-<p>安装openvpn中的TAP即可</p>
-<h5 id="ssh端口转发"><a href="#ssh端口转发" class="headerlink" title="ssh端口转发"></a>ssh端口转发</h5><p>目前在我们的vps上多了一张目标机器的内网网卡，我们需要本地访问内网。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -N -D 8080 user@10.1.1.1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-N 指示SSH不要启动shell，因为我们只是想创建代理</span><br><span class="line">-D 设置动态端口转发，SOCKS代理端口为8080</span><br><span class="line">user 我们服务器上的用户</span><br><span class="line">10.0.1.1 tun接口上的iodine服务器</span><br></pre></td></tr></table></figure>
-
-<p>[注意配置socks5]</p>
-<p>访问vps新增网卡</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsb5p32jhj312x0u0q6z.jpg" alt="image-20201218162854141"></p>
-<p>访问目标机器</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glsbgl5444j321o0mudia.jpg" alt="image-20201218171538892"></p>
-<p>速度杠杠的！！</p>
-<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/system/178214.html">https://www.freebuf.com/articles/system/178214.html</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/12/18/Iodine%E6%90%AD%E5%BB%BADNS%E9%9A%A7%E9%81%93/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
